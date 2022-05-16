@@ -1,0 +1,107 @@
+.bottomAll {
+	max-width: 1400px;
+	width: 100%;
+	margin: 10px auto;
+}
+
+.row {
+    display:flex;
+  }
+  .column5, .column6{
+    flex: 50%;
+    height: 483px;
+    border: solid 0.1px #e4669f !important;
+    margin-top: -170px;
+    margin-right: 15px;
+  }
+  @media (min-width: 1200px) {
+    .column5 {
+        width: 100%;
+        margin-left: 1px;
+    }
+    .column5, .column6{
+      flex: 50%;
+      height: 483px;
+      border: solid 0.1px #e4669f !important;
+      margin-top: -100px;
+      margin-right: 15px;
+    }
+}
+@media (min-width: 1920px) {
+  .column5 {
+      width: 100%;
+      margin-left: 1px;
+  }
+  .column5, .column6{
+    flex: 50%;
+    height: 483px;
+    border: solid 0.1px #e4669f !important;
+    margin-top: -160px;
+    margin-right: 15px;
+  }
+}
+.hyphen{
+  width:30px;
+  height:10px;
+  background-color: #e4669f;
+}
+.column5{
+  color: #fff;
+ }
+ .column5 p, h3{
+  text-align: left;
+  margin-left: 30px;
+ }
+.column5 .levels{
+ width: 100%;
+ height:350PX;
+}
+
+.column6{
+ background-color:#f5f5f5;   
+}
+
+.soccerdays img{
+  width: 100%;
+}
+.greatsponsors{
+    color:#ffffff;
+}
+@media (min-width: 1200px) {
+    .sponsorgrids{
+      width: 100%;
+      height: 150px;
+      margin-top: 20px;
+    }
+    .sponsorgrids .row .col-lg-15 {
+        width: 15%;
+        height: 100px !important;
+        float: left;
+        padding-right: 7px;
+        margin: 0px 10px 10px 0px;
+        color:black;
+        background-color: #ffffff !important;
+    }  
+
+    .sponsorgrids .row .col-lg-15 img{
+        width:150px;
+    }
+    .row .contactus .col-lg-15{
+        width: 100px;
+        height: 100px !important;
+        float: left;
+        padding-right: 7px;
+        margin: 0px 10px 10px 0px;
+        color:rgb(245, 240, 240);
+
+    }
+    .contactus a, .feedback a{
+      color: #fff;
+      text-decoration: none;
+    }
+   .row .social {
+      width: 300px;
+      height: 100px;
+      
+    }
+  }

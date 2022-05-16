@@ -1,0 +1,144 @@
+.column3 h2{
+    text-align: center !important;
+    color: #474545;
+}
+.row {
+    display:flex;
+  }
+  .column4 {
+    flex: 50%;
+    height: 385px;
+    border: solid 0.1px #8d2b47 !important;
+    margin: 0px 15px 0px 0px;
+  }
+  @media (min-width: 1980px) {
+    .bottomText{
+      width: 150px;
+      height: 50px;
+      margin: 270px 0px 10px 550px !important;
+      color: #ffffff;
+      font-weight: bold;
+    }
+}
+  /* .column3 {
+    flex: 50%;
+    height: 400px;
+    border: solid 0.1px #8d2b47 !important;
+    background-color: #ebedf5;
+  } */
+
+
+  @media (min-width: 1280px) {
+    .wrapper {
+      padding: 5px !important;
+      max-width: 1400px;
+      width: 100%;
+      margin: 10px auto;
+      margin-top: 20px !important;
+    }
+    .column3 {
+        width: 100%;
+        margin-left: 1px;
+    }
+    .video-wrapper {
+      flex:50%;
+      position: relative;
+    }
+    .column4 {
+      width:340px;
+      margin-left: 1px;
+  }
+  .bottomText{
+    width: 150px;
+    height: 50px;
+    margin: 270px 0px 10px 470px !important;
+    color: #ffffff;
+    font-weight: bold;
+  }
+    
+}
+.bottomText{
+  width: 150px;
+  height: 50px;
+  margin: 270px 0px 10px 550px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+  .weekly{
+   width:300px;
+   height:270px;
+   margin: 0 auto;
+   
+  }
+  .games p{
+    font-family: gotham,Helvetica,Arial,sans-serif;
+    color: #1d1b1b;
+  }
+
+
+/* .video-wrapper {
+  margin: 0em auto 0;
+  position: relative;
+  border: solid 0.1px #8d2b47 !important;
+} */
+/* #videoBG {
+  position: relative;
+  z-index:-10;
+  height:399px;
+  
+} */
+.video-wrapper video {
+  vertical-align: middle;
+  width: 98%;
+  border: solid 0.1px #8d2b47 !important;
+  z-index:-10;
+}
+.video-description {
+  width:400px;
+  color:#ffffff;
+  background-color: #2a3156;
+  opacity: 0.8;
+  position: relative;
+  top: -65%;
+  margin-left: 150px;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+        align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.watch{
+  position: relative;
+  top: -45%;
+  margin-left: -100px;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.watch input{
+  width: 120px;
+  height: 50px;
+  border: solid 2px #fd4370;
+  background-color: #fafafa;
+  margin: 50px 0px 0px 90px; 
+  font-size: 10px;
+  color: #0d0d0d;
+  font-weight: bold;
+  font-family: gotham,Helvetica,Arial,sans-serif;
+}

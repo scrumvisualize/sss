@@ -1,0 +1,28 @@
+.line1{
+    width: 350px;
+    border-bottom: 2px solid rgb(244, 242, 242);
+    position: absolute;
+    margin-top: -3px;
+    }
+  
+  .line2{
+      width: 270px;
+      border-bottom: 2px solid rgb(244, 242, 242);
+      position: absolute;
+      margin-top: 4px;
+  }
+  
+  .line3{
+    width: 150px;
+    border-bottom: 2px solid rgb(244, 242, 242);
+    position: absolute;
+    margin-top: 10px;
+  }
+
+  #triangle-topright {
+    width: 0;
+    height: 0;
+    border-top: 18px solid #fac856;
+    border-left: 300px solid transparent;
+    float: right;
+  }
