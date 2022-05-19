@@ -91,6 +91,7 @@
 .video-wrapper video {
   vertical-align: middle;
   width: 98%;
+  height:380px;
   border: solid 0.1px #8d2b47 !important;
   z-index:-10;
 }

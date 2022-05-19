@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink} from 'react-router-dom';
 import BackgroundMid from '../../image/Soccer.png';
+import data1 from "../data/textData1";
 
 
 let sectionStyle = {
@@ -11,6 +12,12 @@ let sectionStyle = {
 }
 
 const MiddleSection = () => {
+    const [showMore, setShowMore] = useState(false);
+  
+    const handleClick = (e) => {
+        const id = e.target.id;
+        setShowMore(!showMore);
+      };
     return (
         <div className="wrapper">
             <div className="row">
@@ -36,17 +43,15 @@ const MiddleSection = () => {
                     <div className="col-lg-15 col-sm-6">
                             <div className='row'>
                                 <div className="col-lg-15 col-sm-6">
-                                    {/* <ul className='arrowText'>
-                                        Stay
-                                    </ul> */}
                                     <img src="/images/Group1.png"></img>
                                     <div className='row'>
-                                        <div className="middleTextContent">
+                                        <div className="middleTextContent">        
                                             <p id="middleTextOverlay">
-                                            We are an awesome bunch of friendly people. We play 
-                                            together for fun and enjoy every moment of soccer
-                                            life. As a group we follow a slogan, Together we can !
-                                            </p> 
+                                            {showMore ? data1.TextDataGrp : `${data1.TextDataGrp.substring(0, 100)} `}
+                                            <button className="showMoreLess" onClick={ () => setShowMore(!showMore)}>
+                                                {showMore ? "Show Less": "Show More"}
+                                            </button>
+                                             </p> 
                                         </div>
                                     </div>
                                 </div>   
@@ -55,18 +60,15 @@ const MiddleSection = () => {
                     <div className="col-lg-15 col-sm-6">
                             <div className='row'>
                                 <div className="col-lg-15 col-sm-6">
-                                    {/* <ul className='arrowText'>
-                                        Stay
-                                    </ul> */}
                                     <img src="/images/tact1.png"></img>
                                     <div className='row'>
                                         <div className="middleTextContent">
                                             <p id="middleTextOverlay">
-                                            We apply game tactics during
-                                            friendly and major games. For 7 a side game or 11 a side game
-                                            we usually come up with attacking tactics or  
-                                            defensive tactics.
-                                            </p> 
+                                            {showMore ? data1.TextDataTact : `${data1.TextDataTact.substring(0, 100)} `}
+                                            <button className="showMoreLess" onClick={ () => setShowMore(!showMore)}>
+                                                {showMore ? "Show Less": "Show More"}
+                                            </button>
+                                             </p>
                                         </div>
                                     </div>
                                 </div>   
@@ -76,17 +78,14 @@ const MiddleSection = () => {
                     <div className="col-lg-15 col-sm-6">
                             <div className='row'>
                                 <div className="col-lg-15 col-sm-6">
-                                    {/* <ul className='arrowText'>
-                                        Stay
-                                    </ul> */}
                                     <img src="/images/focus1.png"></img>
                                     <div className='row'>
                                         <div className="middleTextContent">
                                             <p id="middleTextOverlay">
-                                            As a team we focus on team performance and
-                                            individual performance of each and every
-                                            player. As a team we focus to improve our 
-                                            performance from different games.
+                                            {showMore ? data1.TextDataFocus : `${data1.TextDataFocus.substring(0, 100)} `}
+                                            <button className="showMoreLess" onClick={ () => setShowMore(!showMore)}>
+                                                {showMore ? "Show Less": "Show More"}
+                                            </button>
                                             </p> 
                                         </div>
                                     </div>
@@ -96,15 +95,13 @@ const MiddleSection = () => {
                     <div className="col-lg-15 col-sm-6">
                             <div className='row'>
                                 <div className="col-lg-15 col-sm-6">
-                                    {/* <ul className='arrowText'>
-                                        Stay
-                                    </ul> */}
                                      <img src="/images/fit2.png"></img>
                                     <div className="middleTextContent">
                                             <p id="middleTextOverlay">
-                                            We build our core strength and stamina by regular 
-                                            excercise and other fitness options. We warm up really 
-                                            well before the game to avoid injuries.
+                                            {showMore ? data1.TextDataFit : `${data1.TextDataFit.substring(0, 100)} `}
+                                            <button className="showMoreLess" onClick={handleClick}>
+                                                {showMore ? "Show Less": "Show More"}
+                                            </button>
                                             </p> 
                                     </div>
                                 </div>   

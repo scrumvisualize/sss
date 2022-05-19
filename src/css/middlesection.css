@@ -80,7 +80,7 @@ overflow-wrap: break-word;
   .middlegrids img{
     width:80px;
     position: relative;
-    margin: 20px 0px 0px 100px;
+    margin: 20px 0px 0px 110px;
   }
 
 }
@@ -90,8 +90,15 @@ overflow-wrap: break-word;
   z-index:100;
   text-align: left;
   font-size: 15px;
-  color: #4d4d4d;
+  color: #231d80;
   text-align: left;
   margin-left: 10px;
   width: 98%;
+}
+
+.showMoreLess{
+  width:90px;
+  height:20px;
+  border-radius: 10px;
+  border: solid 1px #e4669f;
 }

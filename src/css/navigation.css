@@ -26,6 +26,6 @@
   .logoimage{
     height: 85px;
     width: 85px;
-    position: fixed;
+    position: absolute;
     margin: 0px 0px 15px -10px;
   }

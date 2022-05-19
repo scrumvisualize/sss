@@ -14,7 +14,7 @@ let sectionStyle = {
 const BottomAllLevels = () => {
     return (
         
-        <div className="bottomAll">   
+        <div className="bottomAll">
             <div className="row">
                 <div className="column5">
                     {/* <div style={sectionStyle} className="levels">
