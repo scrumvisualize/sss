@@ -40,15 +40,35 @@ const MiddleSection = () => {
                                         Stay
                                     </ul> */}
                                     <img src="/images/Group1.png"></img>
+                                    <div className='row'>
+                                        <div className="middleTextContent">
+                                            <p id="middleTextOverlay">
+                                            We are an awesome bunch of friendly people. We play 
+                                            together for fun and enjoy every moment of soccer
+                                            life. As a group we follow a slogan, Together we can !
+                                            </p> 
+                                        </div>
+                                    </div>
                                 </div>   
                             </div>
                     </div>
                     <div className="col-lg-15 col-sm-6">
                             <div className='row'>
                                 <div className="col-lg-15 col-sm-6">
-                                    <ul className='arrowText'>
+                                    {/* <ul className='arrowText'>
                                         Stay
-                                    </ul>
+                                    </ul> */}
+                                    <img src="/images/tact1.png"></img>
+                                    <div className='row'>
+                                        <div className="middleTextContent">
+                                            <p id="middleTextOverlay">
+                                            We apply game tactics during
+                                            friendly and major games. For 7 a side game or 11 a side game
+                                            we usually come up with attacking tactics or  
+                                            defensive tactics.
+                                            </p> 
+                                        </div>
+                                    </div>
                                 </div>   
                             </div>
                     </div>
@@ -56,18 +76,37 @@ const MiddleSection = () => {
                     <div className="col-lg-15 col-sm-6">
                             <div className='row'>
                                 <div className="col-lg-15 col-sm-6">
-                                    <ul className='arrowText'>
+                                    {/* <ul className='arrowText'>
                                         Stay
-                                    </ul>
+                                    </ul> */}
+                                    <img src="/images/focus1.png"></img>
+                                    <div className='row'>
+                                        <div className="middleTextContent">
+                                            <p id="middleTextOverlay">
+                                            As a team we focus on team performance and
+                                            individual performance of each and every
+                                            player. As a team we focus to improve our 
+                                            performance from different games.
+                                            </p> 
+                                        </div>
+                                    </div>
                                 </div>   
                             </div>
                     </div>
                     <div className="col-lg-15 col-sm-6">
                             <div className='row'>
                                 <div className="col-lg-15 col-sm-6">
-                                    <ul className='arrowText'>
+                                    {/* <ul className='arrowText'>
                                         Stay
-                                    </ul>
+                                    </ul> */}
+                                     <img src="/images/fit2.png"></img>
+                                    <div className="middleTextContent">
+                                            <p id="middleTextOverlay">
+                                            We build our core strength and stamina by regular 
+                                            excercise and other fitness options. We warm up really 
+                                            well before the game to avoid injuries.
+                                            </p> 
+                                    </div>
                                 </div>   
                             </div>
                     </div>

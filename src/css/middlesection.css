@@ -53,19 +53,21 @@ overflow-wrap: break-word;
   font-family: gotham,Helvetica,Arial,sans-serif;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .middlegrids{
     width: 100%;
     height: 300px;
     margin-top: 20px;
   }
   .middlegrids .row .col-lg-15 {
-      width: 23%;
+      width: 100%;
       float: left;
       padding-right: 7px;
       height: 250px !important;
       margin: 0px 10px 10px 0px;
+      background-color: #f7f7f7;
   }
+
   #overlay {
       background-color: #222846;
       position: relative;
@@ -76,9 +78,20 @@ overflow-wrap: break-word;
       width: 98%;
   }
   .middlegrids img{
-    width:100%;
+    width:80px;
     position: relative;
-    margin: 20px 0px 0px 115px;
+    margin: 20px 0px 0px 100px;
   }
-  
+
+}
+
+.middleTextContent p{
+  position: relative;
+  z-index:100;
+  text-align: left;
+  font-size: 15px;
+  color: #4d4d4d;
+  text-align: left;
+  margin-left: 10px;
+  width: 98%;
 }
