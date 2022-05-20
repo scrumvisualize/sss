@@ -53,6 +53,15 @@ overflow-wrap: break-word;
   font-family: gotham,Helvetica,Arial,sans-serif;
 }
 
+@media (min-width: 1920px) {
+  .middlegrids img{
+    width:80px;
+    position: relative;
+    margin: 20px 0px 0px 110px !important;
+  }
+}
+
+
 @media (min-width: 1280px) {
   .middlegrids{
     width: 100%;
@@ -80,7 +89,7 @@ overflow-wrap: break-word;
   .middlegrids img{
     width:80px;
     position: relative;
-    margin: 20px 0px 0px 110px;
+    margin: 20px 0px 0px 90px;
   }
 
 }
