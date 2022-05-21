@@ -1,9 +1,18 @@
 import React from 'react';
 import { NavLink} from 'react-router-dom';
 import BackgroundTop from '../../image/Great.png';
+import BackDropTop from '../../image/backdrop.JPG';
+
 
 let sectionStyle = {
     backgroundImage: `url("${BackgroundTop}")`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat'
+}
+
+let sectionStyleBackdrop = {
+    backgroundImage: `url("${BackDropTop}")`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat'
@@ -13,6 +22,12 @@ const TopSection = () => {
 
     return (
         <div className="wrapper">
+            <section style={sectionStyleBackdrop} className='topmain'>
+                <div  className="row">
+                
+                </div>
+                <img src="/images/bannerImg1.png"></img>
+            </section>
             <section className="columns">
                 <div className="column">
                     <h2>Southside Soccer Studs</h2>
@@ -21,7 +36,7 @@ const TopSection = () => {
                     </div>
                     <p>
                     <div id='overlay'>
-                      We started our club in 2018 at Calamvale location. We have achieved the registration in 2020.
+                      We started our club in 2018 at Calamvale location. We have received club registration in 2020.
                     </div>
                     </p>
                     <p>

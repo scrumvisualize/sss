@@ -37,7 +37,7 @@ const BottomSection = () => {
                     </video>  
                     <div className="video-description">
                         <p>
-                          We play regularly at Salisbury, Sunnybank and Calamvale
+                          Dribbling snippets
                         </p>
                     </div>
                     <div className="watch">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes, Switch} from "react-router-dom";
 import "./css/navigation.css";
 import "./css/aboutus.css";
@@ -14,6 +14,11 @@ import AboutUs from "./components/aboutUs";
 import Team from "./components/team";
 
 function App() {
+  // useEffect(() => {
+  //   window.process = {
+  //     ...window.process,
+  //   };
+  // }, []);
   return (
     <BrowserRouter>
     <Navigation />

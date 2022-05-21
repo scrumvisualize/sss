@@ -54,6 +54,9 @@ overflow-wrap: break-word;
 }
 
 @media (min-width: 1920px) {
+  .middlestartgrid{
+    margin: 15px 0px 10px 0px !important;
+  }
   .middlegrids img{
     width:80px;
     position: relative;

@@ -20,24 +20,27 @@ const MiddleSection = () => {
       };
     return (
         <div className="wrapper">
-            <div className="row">
-                <div className="column2" >
-                    <div className="midColorPallet">
-                        <div className="design1">
-                            Want to showcase your soccer skills ?
-                            Interested, please come along and join with us.
-                            <input name='register' type="button" value="Register >>"></input>
+            <section className="middlestartgrid">
+                <div className="row">
+                    <div className="column2" >
+                        <div className="midColorPallet">
+                            <div className="design1">
+                                Want to showcase your soccer skills ?
+                                Interested, please come along and join with us.
+                                <input name='register' type="button" value="Register >>"></input>
+                            </div>
+                            <div className="midCoText">
+                            Do you love soccer ? Great footballers
+                            always do great things ! What are you 
+                            waiting for ?
                         </div>
-                        <div className="midCoText">
-                           Do you love soccer ? Great footballers
-                           always do great things ! What are you 
-                           waiting for ?
-                       </div>
+                        </div>
+                    </div>
+                    <div style={sectionStyle} className="column2">
                     </div>
                 </div>
-                <div style={sectionStyle} className="column2">
-                </div>
-            </div>
+            </section>
+     
             <section className="middlegrids">
                 <div className="row">
                     <div className="col-lg-15 col-sm-6">

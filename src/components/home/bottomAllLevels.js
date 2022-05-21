@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink} from 'react-router-dom';
 import BackgroundYellow from '../../image/yellowbgf.png';
+//import Twitter from "../home/twitterFeeds";
 
 
 let sectionStyle = {
@@ -17,8 +18,6 @@ const BottomAllLevels = () => {
         <div className="bottomAll">
             <div className="row">
                 <div className="column5">
-                    {/* <div style={sectionStyle} className="levels">
-                    </div>  */}
                     <h3><div className='hyphen'></div>Skills</h3>
                     <p>Some skills are achieved through consistent training.</p>
                     <h3><div className='hyphen'></div>Training</h3>
@@ -34,6 +33,9 @@ const BottomAllLevels = () => {
                 </div>
                 </div>
             </div>
+            {/* <div className="row">
+                <Twitter/>
+            </div> */}
             <div className="greatsponsors">
                 <h2>Our Sponsors</h2>
             </div>
