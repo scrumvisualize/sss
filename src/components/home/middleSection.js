@@ -30,10 +30,11 @@ const MiddleSection = () => {
                                 <input name='register' type="button" value="Register >>"></input>
                             </div>
                             <div className="midCoText">
-                            Do you love soccer ? Great footballers
-                            always do great things ! What are you 
-                            waiting for ?
-                        </div>
+                                {/* <img src="/images/des4.png"></img> */}
+                                Do you love soccer ? Great footballers
+                                always do great things ! What are you 
+                                waiting for ?
+                            </div>
                         </div>
                     </div>
                     <div style={sectionStyle} className="column2">

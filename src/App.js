@@ -7,11 +7,13 @@ import "./css/topsection.css";
 import "./css/middlesection.css";
 import "./css/bottomsection.css";
 import "./css/bottomalllevels.css";
+import "./css/searchbox.css";
 import "./css/footer.css";
 import Navigation from './components/navigation';
 import Home from "./components/home";
 import AboutUs from "./components/aboutUs";
 import Team from "./components/team";
+import Admin from "./components/admin";
 
 function App() {
   // useEffect(() => {
@@ -28,6 +30,8 @@ function App() {
           <Route path="/aboutUs"  element={<AboutUs />}>
           </Route>
           <Route path="/team" element={<Team />}>
+          </Route>
+          <Route path="/admin" element={<Admin />}>
           </Route>
         </Routes>
     </BrowserRouter>

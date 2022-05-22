@@ -28,7 +28,14 @@ padding-left: 310px;
 font-weight:bold;
 inline-size: 270px;
 overflow-wrap: break-word;
+text-align: left;
 }
+
+/* .midCoText img{
+  width:150px;
+  height:150px;
+  margin: -150px 0px 0px -50px; 
+} */
 
 .design1{
   height:50px;

@@ -7,7 +7,7 @@ const Footer = () => {
         <div id="App">
             <section className="footer">
                 <p className="base">
-                    Copyright @Vinod Mathew 2022
+                  © Vinod Mathew 2022
                 </p>
             </section>
         </div>

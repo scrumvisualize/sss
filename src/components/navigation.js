@@ -15,6 +15,7 @@ const Navigation = () => {
                                 <NavLink className="mob_link" to="/">Home</NavLink>
                                 <NavLink className="mob_link" to="/aboutUs">About Us</NavLink>
                                 <NavLink className="mob_link" to="/team">Team</NavLink>
+                                <NavLink className="mob_link" to="/admin">Admin</NavLink>
                            </div>
                         </div>
                     </nav>
