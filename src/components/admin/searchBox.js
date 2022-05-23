@@ -28,6 +28,7 @@ const SearchBox = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [requestList, setRequestList] = useState([]);
     const [searchResults, setSearchResults] = useState([]);
+    const [processRequest, setProcessRequest] = useState("Accept");
 
     const handleChange = (e) =>{
         setSearchTerm(e.target.value);
@@ -46,6 +47,11 @@ const SearchBox = () => {
         );
         setSearchResults(results);
       }, [searchTerm, requestList]);
+
+      const processRequestData = (e) => {
+        const text = "Save";
+        setProcessRequest(text, e.target.id);
+      };
 
     return (
         <div className="wrapper">
@@ -82,6 +88,9 @@ const SearchBox = () => {
                                     <div className="checkStyle3">
                                         <input type="checkbox"></input>
                                         <label>Active Player</label>
+                                    </div>
+                                    <div className="btnStyle4">
+                                        <button type="button" onClick={ (e) => processRequestData(e)}>{processRequest}</button>
                                     </div>
                                     <div className="btnStyle4">
                                         <input type="button" value="Decline Request"></input>
