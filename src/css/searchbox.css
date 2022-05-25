@@ -40,15 +40,16 @@
     }
     .col1 {
         width: 710px;
-        height: 600px;
+        height: 520px;
         border: solid 0.1px #e4669f !important;
         padding: 10px;
         margin: 10px 0px 10px 0px;
         float: left;
+        overflow: auto;
       }
       .col2 {
         width: 400px;
-        height: 600px;
+        height: 500px;
         border: solid 0.1px #e4669f !important;
         padding: 20px;
         margin: 10px 0px 10px 0px;
@@ -59,7 +60,7 @@
         color: #fff;
     }
     .newsSection textarea{
-        width: 450px !important;
+        width: 400px !important;
         height:150px !important;
         margin: 0 auto;
       }
@@ -122,6 +123,7 @@
         padding: 10px;
         margin: 10px 0px 10px 0px;
         float: left;
+        overflow: auto;
       }
       .col2 {
         width: 500px;
@@ -136,11 +138,12 @@
           color: #fff;
       }
       .newsSection textarea{
-        width: 450px !important;
+        width: 435px !important;
         height:150px !important;
         margin: 0 auto;
         font-size: 18px;
         font-family: gotham,Helvetica,Arial,sans-serif;
+        margin-left: 26px;
       }
       .newsSection button{
           width: 100px;
@@ -159,7 +162,7 @@
         width: 50px;
         height: 30px;
         padding: 10px;
-        margin: 10px 50px 10px 100px;
+        margin: 10px 50px 10px 155px;
         float: left;
       }
       .col1 .loadReqts button{
@@ -169,3 +172,25 @@
     
 }
 
+label {
+  line-height: 1;
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  color: white;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+input[type="submit"] {
+  background: #ec5990;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 10px;
+}

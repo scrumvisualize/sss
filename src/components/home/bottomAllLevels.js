@@ -107,11 +107,11 @@ const BottomAllLevels = () => {
                         <a href="/">Home</a>
                     </span>
                 </h5>
-                <h5>
+                {/* <h5>
                     <span>
                         <a href="/aboutUs">About Us</a>
                     </span>
-                </h5>
+                </h5> */}
                 <h5>
                     <span>
                         <a href="/team">Team</a>

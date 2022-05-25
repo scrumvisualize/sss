@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import { useForm } from "react-hook-form";
 
 const data = [ 
     {
@@ -58,6 +59,7 @@ const SearchBox = () => {
     const [searchResults, setSearchResults] = useState([]);
     const [processRequest, setProcessRequest] = useState("Accept");
     const [loadRequests, setLoadRequests] = useState(3);
+    const { register, errors, handleSubmit } = useForm();
 
     const handleChange = (e) =>{
         setSearchTerm(e.target.value);
@@ -105,6 +107,11 @@ const SearchBox = () => {
       const showMoreRequests = () => {
         setLoadRequests((preValue) => preValue + 2);
     }
+    const onSubmit = (data) => {
+        console.log("RESULT", data);
+        alert(JSON.stringify(data));
+      };
+    console.log(errors);
 
     return (
         <div className="wrapper">
@@ -165,7 +172,7 @@ const SearchBox = () => {
             <section className="col2">
             <h3>Announcement/ News</h3>
                 <div className='newsSection'>
-                    <div className='row'>
+                    {/* <div className='row'>
                         <textarea>
                         </textarea> 
                     </div>
@@ -174,10 +181,20 @@ const SearchBox = () => {
                     </section>   
                     <section className="col4">
                     <button name="submit">Submit</button> 
-                    </section> 
+                    </section>  */}
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        
+                        <label>News update</label>
+                        <textarea
+                            type="text"
+                            {...register("newsUpdate", { required: true, maxLength: 200 })}
+                        />
+                        <section className="col4">
+                        <input type="submit" />
+                        </section>  
+                    </form>
                 </div>
             </section>
-            
         </div>  
     )
 }
