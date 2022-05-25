@@ -22,14 +22,10 @@
         margin : 30px 0px 0px 400px;
         border: solid 0.1px #e4669f !important;
     }
-
-    .requestarea{
-        width:50% !important;
-    }
     
     .playerRow{
      display: flex;
-     width: 700px;
+     width: 710px;
      padding: 10px;
      margin: 5px 0px 10px 0px;
      justify-content: space-between;
@@ -38,10 +34,53 @@
     .plyName, .plyMobile, .checkStyle2, .checkStyle3, .checkStyle4 {
         float: right;
         width: 100px !important;
-        margin: 0px 20px 0px 10px;
+        margin: 0px 10px 0px 10px;
         font-size: 14px;
         color:#fff;
     }
+    .col1 {
+        width: 710px;
+        height: 600px;
+        border: solid 0.1px #e4669f !important;
+        padding: 10px;
+        margin: 10px 0px 10px 0px;
+        float: left;
+      }
+      .col2 {
+        width: 400px;
+        height: 600px;
+        border: solid 0.1px #e4669f !important;
+        padding: 20px;
+        margin: 10px 0px 10px 0px;
+        float: right;
+      }
+      .col1 h3, .col2 h3{
+        text-align: center;
+        color: #fff;
+    }
+    .newsSection textarea{
+        width: 450px !important;
+        height:150px !important;
+        margin: 0 auto;
+      }
+      .col3 {
+        width: 50px;
+        height: 30px;
+        padding: 10px;
+        margin: 10px 0px 10px 100px;
+        float: left;
+      }
+      .col4 { 
+        width: 50px;
+        height: 30px;
+        padding: 10px;
+        margin: 10px 50px 10px 100px;
+        float: left;
+      }
+      .col1 .loadReqts button{
+        width: 20%;
+        margin-left: 270px;
+      }
 }
 
 
@@ -58,7 +97,7 @@
 
     .searchBox{
         height: 60px;
-        margin : 30px 0px 0px 270px;
+        margin : 30px 0px 0px 300px;
     }
     .searchBox input{
         width: 400px;
@@ -66,25 +105,67 @@
         margin : 0px 0px 0px 200px;
         border: solid 0.1px #e4669f !important;
     }
+    .playerRow{
+        width: 710px;
+        padding: 10px;
+        float:left;
+        margin: 5px 0px 10px 0px;
+        justify-content: space-between;
+        background-color: #e4669f;
+        border: solid 1px #767985;
+       }
+   
+       .col1 {
+        width: 710px;
+        height: 600px;
+        border: solid 0.1px #e4669f !important;
+        padding: 10px;
+        margin: 10px 0px 10px 0px;
+        float: left;
+      }
+      .col2 {
+        width: 500px;
+        height: 600px;
+        border: solid 0.1px #e4669f !important;
+        padding: 10px;
+        margin: 10px 0px 10px 0px;
+        float: right;
+      }
+      .col1 h3, .col2 h3{
+          text-align: center;
+          color: #fff;
+      }
+      .newsSection textarea{
+        width: 450px !important;
+        height:150px !important;
+        margin: 0 auto;
+        font-size: 18px;
+        font-family: gotham,Helvetica,Arial,sans-serif;
+      }
+      .newsSection button{
+          width: 100px;
+          padding: 5px;
+          margin: 5px 10px 0px 10px !important;
+          
+      }
+      .col3 {
+        width: 50px;
+        height: 30px;
+        padding: 10px;
+        margin: 10px 0px 10px 100px;
+        float: left;
+      }
+      .col4 { 
+        width: 50px;
+        height: 30px;
+        padding: 10px;
+        margin: 10px 50px 10px 100px;
+        float: left;
+      }
+      .col1 .loadReqts button{
+        width: 20%;
+        margin-left: 270px;
+      }
     
 }
 
-
-.requestarea{
-    width:50%;
-}
-
-.playerRow{
- display: flex;
- padding: 10px;
- margin: 5px 0px 10px 0px;
- justify-content: space-between;
- background-color: #e4669f;
-}
-.plyName, .plyMobile, .checkStyle2, .checkStyle3, .checkStyle4 {
-    float: right;
-    width: 100px;
-    margin: 0px 20px 0px 10px;
-    font-size: 14px;
-    color:#fff;
-}

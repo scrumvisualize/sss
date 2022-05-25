@@ -9,14 +9,14 @@
 }
 .topmain{
     flex:1;
-    height:160px;
+    height:190px;
     margin-bottom: 10px;
 }
 
 .topmain img {
     float : right;
     width : 250px;
-    margin-top: 60px;
+    margin-top: 82px;
 }
 .columns {
 	display: flex;
