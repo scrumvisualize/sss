@@ -13,9 +13,9 @@ const Navigation = () => {
                         <img className='logoimage' alt="SSS Logo" src="/images/super.png"></img>
                            <div className="navigationpanel">
                                 <NavLink className="mob_link" to="/">Home</NavLink>
-                                {/* <NavLink className="mob_link" to="/aboutUs">About Us</NavLink> */}
                                 <NavLink className="mob_link" to="/team">Team</NavLink>
-                                <NavLink className="mob_link" to="/admin">Admin</NavLink>
+                                {/* <NavLink className="mob_link" to="/admin">Admin</NavLink> */}
+                                <NavLink className="mob_link" to="/login">Login</NavLink>
                            </div>
                         </div>
                     </nav>

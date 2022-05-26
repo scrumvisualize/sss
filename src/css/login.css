@@ -1,0 +1,31 @@
+
+.col-high{
+    width: 500px !important;
+    height: 350px;
+    border: solid 0.1px #e4669f !important;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    background-color: #2a3156;
+}
+.col-low{
+    width: 500px !important;
+}
+
+.loginSection input{
+    width: 400px !important;
+    height:30px !important;
+    margin: 10px 0px 10px 40px;
+}
+
+.loginSection label{
+    margin: 0px 0px 0px 40px;
+}
+.col-high h3 {
+    text-align: center;
+    color: #fff;
+}
+.logout img {
+    width : 30px;
+    float : right;
+    margin: -80px 100px 0px 0px;
+}

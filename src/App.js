@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes, Switch} from "react-router-dom";
 import "./css/navigation.css";
+import "./css/login.css";
 import "./css/aboutus.css";
 import "./css/home.css";
 import "./css/topsection.css";
@@ -14,13 +15,10 @@ import Home from "./components/home";
 import AboutUs from "./components/aboutUs";
 import Team from "./components/team";
 import Admin from "./components/admin";
+import Login from "./components/login";
+import { ProtectedRoute } from "./components/protectedRoute";
 
 function App() {
-  // useEffect(() => {
-  //   window.process = {
-  //     ...window.process,
-  //   };
-  // }, []);
   return (
     <BrowserRouter>
     <Navigation />
@@ -31,7 +29,13 @@ function App() {
           </Route>
           <Route path="/team" element={<Team />}>
           </Route>
-          <Route path="/admin" element={<Admin />}>
+          <Route path="/login" element={<Login />}>
+          </Route>
+          <Route path="/admin" element={
+              <ProtectedRoute >
+                  <Admin />
+              </ProtectedRoute>
+              }>
           </Route>
         </Routes>
     </BrowserRouter>

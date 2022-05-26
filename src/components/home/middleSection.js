@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink} from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import BackgroundMid from '../../image/Soccer.png';
 import data1 from "../data/textData1";
 
@@ -13,10 +14,15 @@ let sectionStyle = {
 
 const MiddleSection = () => {
     const [showMore, setShowMore] = useState(false);
+    const navigate = useNavigate();
   
     const handleClick = (e) => {
         const id = e.target.id;
         setShowMore(!showMore);
+      };
+
+      const handleRegister = () => {
+        navigate("");  // create a register component and add here 
       };
     return (
         <div className="wrapper">
@@ -27,7 +33,7 @@ const MiddleSection = () => {
                             <div className="design1">
                                 Want to showcase your soccer skills ?
                                 Interested, please come along and join with us.
-                                <input name='register' type="button" value="Register >>"></input>
+                                <input name='register' type="button" onClick={handleRegister} value="Register >>"></input>
                             </div>
                             <div className="midCoText">
                                 {/* <img src="/images/des4.png"></img> */}

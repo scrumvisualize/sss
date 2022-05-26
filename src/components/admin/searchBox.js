@@ -172,19 +172,8 @@ const SearchBox = () => {
             <section className="col2">
             <h3>Announcement/ News</h3>
                 <div className='newsSection'>
-                    {/* <div className='row'>
-                        <textarea>
-                        </textarea> 
-                    </div>
-                    <section className="col3">
-                    <button name="cancel">Cancel</button>  
-                    </section>   
-                    <section className="col4">
-                    <button name="submit">Submit</button> 
-                    </section>  */}
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        
-                        <label>News update</label>
+                        <label>Enter announcement/ news:</label>
                         <textarea
                             type="text"
                             {...register("newsUpdate", { required: true, maxLength: 200 })}

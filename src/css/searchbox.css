@@ -151,6 +151,9 @@
           margin: 5px 10px 0px 10px !important;
           
       }
+      .newsSection label{
+        margin-left: 26px;
+      }
       .col3 {
         width: 50px;
         height: 30px;
