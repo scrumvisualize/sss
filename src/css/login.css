@@ -13,8 +13,8 @@
 
 .loginSection input{
     width: 400px !important;
-    height:30px !important;
-    margin: 10px 0px 10px 40px;
+    height:40px !important;
+    margin: 5px 0px 10px 40px;
 }
 
 .loginSection label{
@@ -28,4 +28,59 @@
     width : 30px;
     float : right;
     margin: -80px 100px 0px 0px;
+}
+
+@media (min-width: 1280px) {
+    .col-high{
+        width: 500px !important;
+        height: 350px;
+        border: solid 0.1px #e4669f !important;
+        padding: 10px;
+        margin: 10px 0px 10px 350px;
+        background-color: #2a3156;
+    }
+    .emailValidationText{
+        width: 100px;
+        color: rgb(238, 6, 56);
+        margin: 5px 0px 0px 40px;
+    }
+    .passwordValidationText{
+        width: 100px;
+        color: rgb(238, 6, 56);
+        margin: 0px 0px 0px 40px;
+    }
+    .loginValidationText{
+        color: rgb(238, 6, 56);
+    }
+    .logout img {
+        width : 30px;
+        float : right;
+        margin: -80px 40px 0px 0px;
+    }
+
+}
+
+@media (min-width: 1920px) {
+    .col-high{
+        width: 500px !important;
+        height: 400px;
+        border: solid 0.1px #e4669f !important;
+        padding: 10px;
+        margin: 10px 0px 10px 400px;
+        background-color: #2a3156;
+    }
+    .emailValidationText{
+        width: 100px;
+        color: rgb(238, 6, 56);
+        margin: 5px 0px 0px 40px;
+    }
+    .passwordValidationText{
+        width: 100px;
+        color: rgb(238, 6, 56);
+        margin: 0px 0px 0px 40px;
+    }
+    .loginValidationText{
+        color: rgb(238, 6, 56);
+    }
+
 }

@@ -9,6 +9,7 @@ import "./css/middlesection.css";
 import "./css/bottomsection.css";
 import "./css/bottomalllevels.css";
 import "./css/searchbox.css";
+import "./css/requesttojoin.css";
 import "./css/footer.css";
 import Navigation from './components/navigation';
 import Home from "./components/home";
@@ -16,6 +17,7 @@ import AboutUs from "./components/aboutUs";
 import Team from "./components/team";
 import Admin from "./components/admin";
 import Login from "./components/login";
+import RequestToJoin from "./components/requestToJoin";
 import { ProtectedRoute } from "./components/protectedRoute";
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
           <Route path="/team" element={<Team />}>
           </Route>
           <Route path="/login" element={<Login />}>
+          </Route>
+          <Route path="/requestToJoin" element={<RequestToJoin />}>
           </Route>
           <Route path="/admin" element={
               <ProtectedRoute >

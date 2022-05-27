@@ -22,7 +22,7 @@ const MiddleSection = () => {
       };
 
       const handleRegister = () => {
-        navigate("");  // create a register component and add here 
+        navigate("/requestToJoin");  // create a register component and add here 
       };
     return (
         <div className="wrapper">
@@ -31,9 +31,8 @@ const MiddleSection = () => {
                     <div className="column2" >
                         <div className="midColorPallet">
                             <div className="design1">
-                                Want to showcase your soccer skills ?
-                                Interested, please come along and join with us.
-                                <input name='register' type="button" onClick={handleRegister} value="Register >>"></input>
+                                Are you interested, please send a request !
+                                <input name='register' type="button" onClick={handleRegister} value="Send Request >>"></input>
                             </div>
                             <div className="midCoText">
                                 {/* <img src="/images/des4.png"></img> */}

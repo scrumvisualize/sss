@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-
-const Login = () =>{
+const RequestToJoin = () =>{
     const { register, handleSubmit, formState: { errors }} = useForm();
     const [loginData, setLoginData] = useState("");
     const [helperText, setHelperText] = useState('');
@@ -10,30 +9,38 @@ const Login = () =>{
 
     const onSubmit = (data) => {
         //console.log("RESULT", data);
-       // alert(JSON.stringify(data));
+        //alert(JSON.stringify(data));
         try {
-            const userEmail = "max@test.com";
-            const userPassword = "test1234";
-            if(data.email === userEmail && data.password === userPassword ){
-                localStorage.setItem('loginEmail', userEmail);
-                setLoginData(userEmail);
-                navigate('/admin');
-                window.location.reload(true) 
-            } else {
-                setHelperText("Invalid login details");
-            }
+    
         } catch (e){
             console.log(e);
         }
       };
-    console.log(errors);
+        console.log(errors);
 
     return (
         <div className="wrapper">
             <section className="col-high">
-                <h3>Login</h3>
-                <div className='loginSection'>
+                <h3>Send a request</h3>
+                <div className='requestSection'>
                     <form onSubmit={handleSubmit(onSubmit)}>
+                        <label>Name</label>
+                        <input
+                            id="name"
+                            type="text"
+                            {...register("name", { 
+                                required: true,
+                                maxLength: 30
+                            })}
+                        />
+                        <section>
+                        <span className="nameValidationText">
+                             {errors.name && errors.name.type === "required" && <span>Name is required !</span>}
+                             {errors.name && errors.name.type === "maxLength" && <span>Name should be less than 30 characters !</span>}
+                             
+                         </span>
+                        </section>
+                
                         <label>Email</label>
                         <input
                             id="email"
@@ -52,28 +59,24 @@ const Login = () =>{
                              {errors.email && <span>{errors.email.message}</span>}
                          </span>
                         </section>
-                        <label>Password</label>
+                        <label>Mobile</label>
                         <input
-                            id="password"
-                            type="password"
-                            {...register("password", { 
+                            id="mobile"
+                            type="number"
+                            {...register("mobile", { 
                                 required: true,
-                                minLength: {
-                                    value: 5,
-                                    message: "Minimum length of 5 letters"
-                                },
-                                pattern: {
-                                    value: /^(?=.*?\d)(?=.*?[a-zA-Z])[a-zA-Z\d][a-zA-Z\d\#!@~$]+$/,
-                                    message: "Password begin with letter, includes number & special character"
-                                }
+                                valueAsNumber: true,
+                                maxLength: 10
                             })}
                         />
                         <section>
-                        <span className="passwordValidationText">
-                             {errors.password && errors.password.type === "required" && <span>Password is required !</span>}
-                             {errors.password && <span>{errors.password.message}</span>}
+                        <span className="nameValidationText">
+                             {errors.mobile && errors.mobile.type === "required" && <span>Mobile is required !</span>}
+                             {errors.mobile && errors.mobile.type === "maxLength" && <span>Maximum of 10 digits</span>}
                          </span>
                         </section>
+         
+
                          <label>
                             <span className="loginValidationText">{helperText}</span>
                          </label>
@@ -86,4 +89,4 @@ const Login = () =>{
         </div>
     )
 }
-export default Login
+export default RequestToJoin
