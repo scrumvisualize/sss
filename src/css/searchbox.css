@@ -31,12 +31,30 @@
      justify-content: space-between;
      background-color: #e4669f;
     }
-    .plyName, .plyMobile, .checkStyle2, .checkStyle3, .checkStyle4 {
+    .plyName, .checkStyle2, .checkStyle3, .checkStyle4 {
         float: right;
-        width: 100px !important;
+        width: 70px !important;
         margin: 0px 10px 0px 10px;
         font-size: 14px;
         color:#fff;
+    }
+    .plyEmail{
+      float: right;
+      width: 80px !important;
+      margin: 0px 5px 0px 5px;
+      font-size: 12px;
+      color:#fff;
+  }
+    .plyMobile{
+      float: right;
+      width: 50px !important;
+      margin: 0px 10px 0px 5px;
+      font-size: 12px;
+      color:#fff;
+  }
+    .plyPhoto img{
+      width: 50px !important;
+      border-radius: 25px;
     }
     .col1 {
         width: 710px;
@@ -171,6 +189,9 @@
       .col1 .loadReqts button{
         width: 20%;
         margin-left: 270px;
+      }
+      .plyPhoto img{
+        width: 50px !important;
       }
     
 }

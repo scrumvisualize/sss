@@ -31,7 +31,7 @@ const MiddleSection = () => {
                     <div className="column2" >
                         <div className="midColorPallet">
                             <div className="design1">
-                                Are you interested, please send a request !
+                                Click here to send us a request to join !
                                 <input name='register' type="button" onClick={handleRegister} value="Send Request >>"></input>
                             </div>
                             <div className="midCoText">

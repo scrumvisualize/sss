@@ -1,7 +1,7 @@
 @media (min-width: 1280px) {
     .col-high{
         width: 500px !important;
-        height: 400px;
+        height: 600px;
         border: solid 0.1px #e4669f !important;
         padding: 10px;
         margin: 10px 0px 10px 400px;
@@ -35,7 +35,7 @@
 @media (min-width: 1920px) {
     .col-high{
         width: 500px !important;
-        height: 400px;
+        height: 600px !important;
         border: solid 0.1px #e4669f !important;
         padding: 10px;
         margin: 10px 0px 10px 400px;
@@ -63,5 +63,12 @@
     .loginValidationText{
         color: rgb(238, 6, 56);
     }
+    .previewProfilePic img{
+        width: 50px;
+        height: 50px;
+        margin: -20px 0px 10px 40px !important;
+        border-radius: 25px;
+    }
+    
 
 }
