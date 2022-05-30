@@ -1,7 +1,43 @@
 
 import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
-
+const plydata = [
+    {
+        "id" : 1,
+        "photo":"images/default-icon.png",
+        "email": "test1@test.com"
+    },
+    {
+        "id" : 2,
+        "photo":"images/default-icon.png",
+        "email": "test2@test.com"
+    },
+    {
+        "id" : 3,
+        "photo":"images/default-icon.png",
+        "email": "test3@test.com"
+    },
+    {
+        "id" : 4,
+        "photo":"images/default-icon.png",
+        "email": "test3@test.com"
+    },
+    {
+        "id" : 5,
+        "photo":"images/default-icon.png",
+        "email": "test3@test.com"
+    },
+    {
+        "id" : 6,
+        "photo":"images/default-icon.png",
+        "email": "test3@test.com"
+    },
+    {
+        "id" : 7,
+        "photo":"images/default-icon.png",
+        "email": "test3@test.com"
+    }
+]
 const data = [ 
     {
     "id" : 1,
@@ -68,6 +104,8 @@ const SearchBox = () => {
     const [processRequest, setProcessRequest] = useState("Accept");
     const [loadRequests, setLoadRequests] = useState(3);
     const { register, errors, handleSubmit } = useForm();
+    const [playerOfMonth, setPlayerOfMonth] = useState([]);
+    const [visible, setVisible] = useState(false);
 
     const handleChange = (e) =>{
         setSearchTerm(e.target.value);
@@ -76,6 +114,10 @@ const SearchBox = () => {
 
     useEffect(() => {
         setRequestList(data);
+    }, []);
+
+    useEffect(() => {
+        setPlayerOfMonth(plydata);
     }, []);
 
 
@@ -197,6 +239,19 @@ const SearchBox = () => {
                         </section>  
                     </form>
                 </div>
+                
+                <section className='playermonthly'>
+                <h4>Player of month</h4>
+                    <div className='row'>
+                        {
+                            playerOfMonth.map(({id, photo, email}) =>(
+                            <div key={id} className='starPlayers'>
+                                <img src={photo}></img>
+                                <span className='starPlayEmail'>{email}</span>
+                            </div>
+                        ))}
+                    </div>
+                </section>
             </section>
         </div>  
     )

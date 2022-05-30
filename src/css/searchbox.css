@@ -1,4 +1,6 @@
-
+.starPlayEmail{
+ display: none;
+}
 
 @media (min-width: 1280px) {
     .searchMainBox{
@@ -73,7 +75,7 @@
         margin: 10px 0px 10px 0px;
         float: right;
       }
-      .col1 h3, .col2 h3{
+      .col1 h3, .col2 h3, h4{
         text-align: center;
         color: #fff;
     }
@@ -91,7 +93,7 @@
       }
       .col4 { 
         width: 50px;
-        height: 30px;
+        height: 20px;
         padding: 10px;
         margin: 10px 50px 10px 100px;
         float: left;
@@ -99,6 +101,40 @@
       .col1 .loadReqts button{
         width: 20%;
         margin-left: 270px;
+      }
+    
+      input[type="submit"] {
+        width: 150px;
+        height:30px;
+        background: #ec5990;
+        color: white;
+        text-transform: uppercase;
+        border: none;
+        margin-top: 2px;
+        font-size: 16px;
+        font-weight: 100;
+        letter-spacing: 10px;
+      }
+      /* .starPlayers{
+        height: 75px;
+        width: 75px;
+        background-color: #d4d6db;
+        margin: 7px;
+      } */
+
+      .col2 .playermonthly{
+        width: 400px;
+        height: 200px;
+        /* border: solid 0.1px #e4669f !important; */
+        margin: 100px 0px 10px 30px !important;
+      }
+      .starPlayers img{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr !important;
+        width:50px;
+        height: 50px;
+        border-radius: 25px;
+        margin: 100px 0px 0px 10px;
       }
 }
 
@@ -193,6 +229,28 @@
       .plyPhoto img{
         width: 50px !important;
       }
+
+      .playermonthly{
+        width: 400px;
+        height: 300px;
+        /* border: solid 0.1px #e4669f !important; */
+        margin: 100px 0px 10px 30px !important;
+      }
+
+      .starPlayers img{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr !important;
+        border-radius: 25px;
+        margin: 10px 5px 0px 10px;
+      }
+
+      .successRequest{
+        color: #46e49a;
+        font-size: 14px;
+        font-weight: 100;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+      }
     
 }
 
@@ -207,14 +265,3 @@ label {
   font-weight: 100;
 }
 
-input[type="submit"] {
-  background: #ec5990;
-  color: white;
-  text-transform: uppercase;
-  border: none;
-  margin-top: 40px;
-  padding: 20px;
-  font-size: 16px;
-  font-weight: 100;
-  letter-spacing: 10px;
-}
