@@ -162,7 +162,7 @@
     }
     .playerRow{
         width: 710px;
-        padding: 10px;
+        padding: 0px;
         float:left;
         margin: 5px 0px 10px 0px;
         justify-content: space-between;
@@ -251,6 +251,43 @@
         margin-bottom: 10px;
         padding-bottom: 10px;
       }
+      .checkStyle1{
+        margin: 10px 5px 0px 5px;
+      }
+
+      .plyName, .checkStyle4, .btnStyle4{
+        float: right;
+        width: 50px !important;
+        margin: 10px 5px 0px 5px;
+        font-size: 14px;
+        color:#fff;
+    }
+    .checkStyle2, .checkStyle3{
+      float: right;
+      width: 100px !important;
+      margin: 10px 5px 0px 5px;
+      font-size: 14px;
+      color:#fff;
+    }
+    .plyEmail{
+      float: right;
+      width: 80px !important;
+      margin: 10px 15px 0px 0px;
+      font-size: 12px;
+      color:#fff;
+  }
+    .plyMobile{
+      float: right;
+      width: 50px !important;
+      margin: 10px 10px 0px 5px;
+      font-size: 12px;
+      color:#fff;
+  }
+    .plyPhoto img{
+      width: 30px !important;
+      border-radius: 15px;
+      margin: 5px 15px 0px 0px;
+    }
     
 }
 

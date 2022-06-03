@@ -23,12 +23,13 @@ module.exports = (sequelize, DataTypes) => {
         },
         photo: {
             type: DataTypes.STRING(300),
-
         },
         code: {
             type: DataTypes.STRING(30),
-
 		},
+        status: {
+            type: DataTypes.STRING(30)
+        },
 		createdAt: {
             type: DataTypes.DATE,
             allowNull: false,

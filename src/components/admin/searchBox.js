@@ -1,5 +1,6 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import axios from 'axios'
 import { useForm } from "react-hook-form";
 const plydata = [
     {
@@ -106,14 +107,37 @@ const SearchBox = () => {
     const { register, errors, handleSubmit } = useForm();
     const [playerOfMonth, setPlayerOfMonth] = useState([]);
     const [visible, setVisible] = useState(false);
+    const isMounted = useRef(false);
 
     const handleChange = (e) =>{
         setSearchTerm(e.target.value);
         console.log("Items:"+searchTerm);
     }
-
+    
     useEffect(() => {
-        setRequestList(data);
+        isMounted.current = true;
+        return () => isMounted.current = false;
+      }, []);
+    
+    useEffect(() => {
+        //setRequestList(data);
+            const fetchData = async () => {
+              try {
+                const res = await axios.get('http://localhost:8000/service/requestlist');
+                if (isMounted.current) {
+
+                  setRequestList(res.data.requests);
+                  //setPlayerList(res.data.players);
+                  setSearchResults(res.data.requests);
+                }
+              } catch (e) {
+                if (isMounted.current) {
+                  //setIsLoading(false);
+                }
+                console.log(e);
+              }
+            }
+            fetchData();
     }, []);
 
     useEffect(() => {
@@ -174,11 +198,10 @@ const SearchBox = () => {
                     </label>
                 </div>
             </section>
-            <section class="col1">
+            <section className="col1">
              <h3>Players Requests</h3>
             {
                         searchResults.slice(0, loadRequests).map(({id, photo, name, email, mobile, processRequest }) => (
-
                         <div className='row'>
                             <div className="playerRow"> 
                                 <label key={id}>
@@ -187,7 +210,7 @@ const SearchBox = () => {
                                             <input type="checkbox"></input>
                                         </div>
                                         <div className="plyPhoto">
-                                            <img src={photo}></img>
+                                            <img src={photo.replace('\.\.\\public\\','')}></img>
                                         </div>
                                         <div className="plyName">
                                             <span>{name}</span>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink} from 'react-router-dom';
 import BackgroundBottom from '../../image/img2.png';
-import BackgroundVideo from '../../image/samplevideo.mp4';
+import BackgroundVideo from '../../image/sss.mp4';
 
 let sectionStyle = {
     backgroundImage: `url("${BackgroundBottom}")`,
@@ -36,9 +36,9 @@ const BottomSection = () => {
                         <source src={BackgroundVideo} type='video/mp4' />
                     </video>  
                     <div className="video-description">
-                        <p>
+                        {/* <p>
                           Dribbling snippets
-                        </p>
+                        </p> */}
                     </div>
                     <div className="watch">
                         <input name='watch' type="button" value="Watch our play"></input>

@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 const RequestToJoin = () =>{
-    const { register, handleSubmit, formState: { errors }} = useForm();
+    const { register, handleSubmit, formState: { errors }, reset} = useForm();
     const [loginData, setLoginData] = useState("");
     const [helperText, setHelperText] = useState('');
     const [preview, setPreview] = useState('');
@@ -15,20 +15,9 @@ const RequestToJoin = () =>{
     const successMessage = <p>Request send successfully!</p>
     const form = <form>...</form>
 
-    // const onSubmit = (data) => {
-    //     //console.log("RESULT", data);
-    //     //alert(JSON.stringify(data));
-    //     try {
-    
-    //     } catch (e){
-    //         console.log(e);
-    //     }
-    //   };
-    //     console.log(errors);
-
 // If no profile image is being uploaded, to avoid the broken display of image, display a default image.
         const addDefaultSrc = e => {
-            e.target.src = 'public/images/default-icon.png';
+            e.target.src = 'images/default-icon.png';
         }
 
         // const onChangePicture = e => {
@@ -79,7 +68,7 @@ const RequestToJoin = () =>{
                   console.log("Front End success message:" + res.data.success);
                   if (res.data.success) {
                     setIsSent(true);
-                    // history.push('/login')
+                    // navigate('/');
                   }
                   else {
                     console.log(res.data.message);
@@ -91,6 +80,7 @@ const RequestToJoin = () =>{
                 }
               }
               fetchData();
+              reset();
             }
             console.log(errors);
     return (

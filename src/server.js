@@ -5,6 +5,7 @@ var path = require('path');
 const moment = require('moment');
 const { Sequelize, DataTypes } = require("sequelize");
 const requestSchema = require('./server/models/requests');
+const userSchema = require('./server/models/user');
 
 
 const cors = require("cors");
@@ -33,6 +34,7 @@ const sequelize = new Sequelize(DB_NAME, DB_USERNAME, DB_PASSWORD, {
 });
 
 const RequestModel = requestSchema(sequelize, DataTypes);
+const UserModel = userSchema(sequelize, DataTypes);
 
 app.use(cors({
   origin: "http://localhost:3000"
@@ -47,7 +49,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'public/images')
+    cb(null, '../public/images')
   },
   filename: function (req, file, cb) {
     var ext = file.originalname.split('.').pop();
@@ -57,13 +59,13 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage });
 
-// This method is used to send a request by a player who wish to join the club via send Request button in Home screen.
+// This service method is used to send a PUT request for a player who wish to join the club via send Request button in Home screen.
 
 app.put('/service/joinrequest',  upload.single('photo'), async (req, res, next) => {
   try {
     const code = req.body.code;
     const pName = req.body.name;
-    const pEmail = req.body.email; //exisiting code
+    const pEmail = req.body.email; 
     const pMobile = req.body.mobile;
     console.log(req.file);
     const validCode = "Soccer-575";
@@ -81,7 +83,6 @@ app.put('/service/joinrequest',  upload.single('photo'), async (req, res, next) 
       } else {
           var imageName = "noimage.png";
       }    
-        //If the email doesn't exists, procced with normal registration here...
         var requestData = {name:pName, email:pEmail, mobile:pMobile, photo: revisedPath, code: code };
         const addRequest = await RequestModel.create(requestData);
         console.log("Server side PUT method log:" + addRequest);
@@ -97,6 +98,48 @@ app.put('/service/joinrequest',  upload.single('photo'), async (req, res, next) 
   }
 });
 
+
+// This method is used only for admin user to login to admin panel to approve player requests.
+
+app.post('/service/login', async (req, res) => {
+  try {
+    const userEmail = req.body.email;
+    const userPassword = req.body.password;
+    const adminUser = await UserModel.findAll({ where: { email: userEmail } });
+    console.log("Log Admin:" + adminUser);
+    if (adminUser == null || adminUser == '') {
+      console.log("Check login user is null:" + adminUser);
+      res.status(403).json({ fail: "Invalid admin user details !" });
+    }
+    const email = adminUser[0].email;
+    const password = adminUser[0].password;
+    console.log("Ghaaa"+ email + password);
+    if (password === userPassword && email === userEmail) {
+      //const role = adminUser[0].role; // if role is needed in future, please send along with res json()
+      res.status(200).json({ success: true });
+    } else {
+      res.status(403).json({ fail: "Email or Password is incorrect !" });
+    }
+  } catch (e) {
+    res.status(500).json();
+  }
+});
+
+
+/* Below get method will display all of the player requests in the admin screen, so admin can act upon it */ 
+
+app.get('/service/requestlist', async (req, res) => {
+  try {
+    const requests = await RequestModel.findAll({});
+    requests.map(req => {
+      req.setDataValue("processRequest", "Accept");
+      return req;
+  })
+    res.status(200).json({ requests });
+  } catch (e) {
+    res.status(500).json({ message: e.message });
+  }
+});
 
 
 (async () => {
