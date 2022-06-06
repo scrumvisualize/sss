@@ -11,6 +11,7 @@ import "./css/bottomalllevels.css";
 import "./css/searchbox.css";
 import "./css/requesttojoin.css";
 import "./css/footer.css";
+import "./css/team.css";
 import Navigation from './components/navigation';
 import Home from "./components/home";
 import AboutUs from "./components/aboutUs";

@@ -11,7 +11,6 @@
     .searchMainBox h3 {
         margin : 5px 0px 5px 220px;
         color: #f5f5f5;
-
     }
 
     .searchBox{
@@ -125,16 +124,17 @@
       .col2 .playermonthly{
         width: 400px;
         height: 200px;
-        /* border: solid 0.1px #e4669f !important; */
         margin: 100px 0px 10px 30px !important;
       }
-      .starPlayers img{
+      .playermonthly .starPlayers img{
+        /* display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr 1fr !important; */
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr !important;
+        grid-template-columns: 50px 50px 50px 50px 50px !important;
         width:50px;
         height: 50px;
         border-radius: 25px;
-        margin: 100px 0px 0px 10px;
+        margin: 5px 0px 0px 2px;
       }
 }
 
@@ -287,6 +287,12 @@
       width: 30px !important;
       border-radius: 15px;
       margin: 5px 15px 0px 0px;
+    }
+
+    .requestValidationText{
+      height: 30px;
+      color:rgb(63, 211, 184);
+      margin: 10px 15px 0px 260px !important;
     }
     
 }

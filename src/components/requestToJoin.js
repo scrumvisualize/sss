@@ -103,7 +103,7 @@ const RequestToJoin = () =>{
                                 }));
                             },
                             required: true,
-                              maxLength: 30
+                            maxLength: 30
                             })}
                         />
                         <section>
@@ -166,11 +166,31 @@ const RequestToJoin = () =>{
                         </section>
                         <label>Photo</label>
                         <div className="request_profile_image">
-                            <input id="profilePic" name="photo" type="file" onChange={onChangePicture} />
+                            <input 
+                            id="profilePic" 
+                            name="photo" 
+                            type="file" 
+                            {...register("photo", { 
+                              onChange: (e) => {
+                                let val = e.nativeEvent.path[0].value;
+                                setRegister(previous => ({
+                                  ...previous, 
+                                  photo: val
+                                }));
+                            },
+                            required: true
+                            })}
+                            onChange={onChangePicture} 
+                            />
+                            <section>
+                            <span className="nameValidationText">
+                             {errors.photo && errors.photo.type === "required" && <span>Photo is required !</span>}
+                            </span>
+                            </section>
                          </div>
-                        <div className="previewProfilePic">
+                        {/* <div className="previewProfilePic">
                             <img onError={addDefaultSrc} className="playerProfilePic_home_tile" src={preview} />
-                        </div>
+                        </div> */}
 
                         <label>Code</label>
                         <input

@@ -141,6 +141,54 @@ app.get('/service/requestlist', async (req, res) => {
   }
 });
 
+/* When admin user accepts a player, below post request will set status to "Yes" in the status colum */ 
+
+app.post('/service/acceptplayerrequest', async (req, res) => {
+  try {  
+    const pEmail = req.body.email;
+    var updateStatus =  "Yes";
+    const pStatus = await RequestModel.update(
+      { status : updateStatus },
+      { where: { email: pEmail } }
+      );   
+    console.log("Server side to accept player :" + pStatus);
+    res.status(200).json({ success: true });
+  } catch (e) {
+    res.status(500).json({ message: e.message });
+  }
+});
+
+
+/* When admin user decline a request, below post request will set status to "No" in the status colum */ 
+
+app.put('/service/declinerequest', async (req, res) => {
+  try {  
+    const pEmail = req.body.email;
+    var updateStatus =  "No";
+    const pStatus = await RequestModel.update(
+      { status : updateStatus },
+      { where: { email: pEmail } }
+      );   
+    console.log("Server side to decline request :" + pStatus);
+    res.status(200).json({ success: true });
+  } catch (e) {
+    res.status(500).json({ message: e.message });
+  }
+});
+
+
+/* Below service will get the active list of player in the team /squad page  */ 
+app.get('/service/activesquadlist', async (req, res) => {
+  try {
+    const active = await RequestModel.findAll(
+      { where: { status : "Yes" } }
+    );
+    res.status(200).json({ active });
+  } catch (e) {
+    res.status(500).json({ message: e.message });
+  }
+});
+
 
 (async () => {
   try {
