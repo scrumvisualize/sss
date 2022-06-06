@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink} from 'react-router-dom';
-import BackgroundTop from '../../image/Great.png';
+import BackgroundTop from '../../image/trio.png';
 import BackDropTop from '../../image/backdrop.JPG';
 
 

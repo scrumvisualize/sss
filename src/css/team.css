@@ -33,11 +33,13 @@
     .squads > .box img{
         max-width:100% !important;
         width:100% !important;
+        height: 290px;
         margin: 0px 0px 0px 0px !important;
         padding: 0px 0px !important;
     }
     .squaddetails{
         text-align: center;
+        height: 30px !important;
     }
     .box:hover {
         background-color: #d62477;
@@ -81,11 +83,13 @@
     .squads > .box img{
         max-width:100% !important;
         width:100% !important;
+        height: 350px;
         margin: 0px 0px 0px 0px !important;
         padding: 0px 0px !important;
     }
     .squaddetails{
         text-align: center;
+        height: 30px !important;
     }
     .box:hover {
         background-color: rgb(224, 53, 104);
