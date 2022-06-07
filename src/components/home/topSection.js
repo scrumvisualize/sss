@@ -89,7 +89,7 @@ const TopSection = () => {
             
                 </div>
             </section>	
-            <section className="arrowSection">
+            {/* <section className="arrowSection">
                 <div className="row">
                     <div className="col-lg-15 col-sm-6">
                         <div className='row'>
@@ -142,7 +142,7 @@ const TopSection = () => {
                         </div>
                     </div>
                 </div>
-            </section> 
+            </section>  */}
         </div>
     )
 }

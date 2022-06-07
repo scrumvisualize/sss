@@ -133,7 +133,12 @@ const BottomAllLevels = () => {
             </section> 
             <section className="social">
                 
-                
+                <ul className='social_all'>
+                    <li>
+                        <a href="https://twitter.com/"><img src="images/twitter.png"></img>
+                        </a>
+                    </li>
+                </ul>
             </section> 
             </div>
         </div>

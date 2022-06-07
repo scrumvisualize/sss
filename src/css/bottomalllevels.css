@@ -26,6 +26,11 @@
       margin-top: -100px;
       margin-right: 15px;
     }
+    .social_all > li > a > img{
+      display: flex;
+      height: 30px;
+      margin: 0px 0px 0px 800px;
+    }
 }
 @media (min-width: 1920px) {
   .column5 {
@@ -38,6 +43,12 @@
     border: solid 0.1px #e4669f !important;
     margin-top: 0px;
     margin-right: 15px;
+  }
+
+  .social_all > li > a > img{
+    display: flex;
+    height: 30px;
+    margin: 0px 0px 0px 900px;
   }
 }
 .hyphen{

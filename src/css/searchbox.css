@@ -1,6 +1,16 @@
 .starPlayEmail{
  display: none;
 }
+label {
+  line-height: 1;
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 100;
+}
 
 @media (min-width: 1280px) {
     .searchMainBox{
@@ -30,32 +40,36 @@
      padding: 10px;
      margin: 5px 0px 10px 0px;
      justify-content: space-between;
-     background-color: #e4669f;
+     /* background-color: #e4669f; */
+     background-color: #e8e9eb; 
     }
     .plyName, .checkStyle2, .checkStyle3, .checkStyle4 {
         float: right;
         width: 70px !important;
         margin: 0px 10px 0px 10px;
         font-size: 14px;
-        color:#fff;
+        color: #0d1f43 !important;
     }
     .plyEmail{
       float: right;
       width: 80px !important;
       margin: 0px 5px 0px 5px;
       font-size: 12px;
-      color:#fff;
+      color: #0d1f43;
   }
     .plyMobile{
       float: right;
       width: 50px !important;
       margin: 0px 10px 0px 5px;
       font-size: 12px;
-      color:#fff;
+      color: #090909;
   }
     .plyPhoto img{
       width: 50px !important;
       border-radius: 25px;
+    }
+    .checkStyle2 > label, .checkStyle3 > label{
+      color: #0d1f43;
     }
     .col1 {
         width: 710px;
@@ -166,8 +180,7 @@
         float:left;
         margin: 5px 0px 10px 0px;
         justify-content: space-between;
-        background-color: #e4669f;
-        border: solid 1px #767985;
+        background-color: #e8e9eb; 
        }
    
        .col1 {
@@ -260,28 +273,33 @@
         width: 50px !important;
         margin: 10px 5px 0px 5px;
         font-size: 14px;
-        color:#fff;
+        color: #0d1f43;
     }
     .checkStyle2, .checkStyle3{
       float: right;
       width: 100px !important;
       margin: 10px 5px 0px 5px;
       font-size: 14px;
-      color:#fff;
+      color: #0d1f43;
     }
+
+    .checkStyle2 > label, .checkStyle3 > label{
+      color: #0d1f43;
+    }
+    
     .plyEmail{
       float: right;
       width: 80px !important;
       margin: 10px 15px 0px 0px;
       font-size: 12px;
-      color:#fff;
+      color: #0d1f43;
   }
     .plyMobile{
       float: right;
       width: 50px !important;
       margin: 10px 10px 0px 5px;
       font-size: 12px;
-      color:#fff;
+      color: #0d1f43;
   }
     .plyPhoto img{
       width: 30px !important;
@@ -297,14 +315,5 @@
     
 }
 
-label {
-  line-height: 1;
-  text-align: left;
-  display: block;
-  margin-bottom: 5px;
-  margin-top: 0px;
-  color: white;
-  font-size: 14px;
-  font-weight: 100;
-}
+
 

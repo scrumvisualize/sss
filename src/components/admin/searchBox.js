@@ -187,7 +187,7 @@ const SearchBox = () => {
                                             <img src={photo.replace('\.\.\\public\\','')}></img>
                                         </div>
                                         <div className="plyName">
-                                            <span>{name}</span>
+                                            <span><b>{name}</b></span>
                                         </div>
                                         <div className="plyEmail">
                                             <span>{email}</span>

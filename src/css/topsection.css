@@ -9,14 +9,14 @@
 }
 .topmain{
     flex:1;
-    height:190px;
+    height:300px;
     margin-bottom: 10px;
 }
 
 .topmain img {
     float : right;
     width : 250px;
-    margin-top: 82px;
+    margin-top: 193px;
 }
 .columns {
 	display: flex;
@@ -91,6 +91,7 @@
         color: black;
         text-overflow: ellipsis; 
     }
+ 
 }
 @media (min-width: 992px) {
     .col-md-15 {
@@ -184,11 +185,11 @@ width: 50px;
             width:25px;
             float:left;
             margin-top: 0px;
-            margin-right: 100p;
+            margin-right: 5px;
         }
 
         .arrowSection{
-            margin: 10px 0px 10px 0px !important;
+            margin: 10px 0px 5px 0px !important;
         }
         #overlay {
             background-color: #222846;
@@ -199,7 +200,10 @@ width: 50px;
             margin-left: 0px !important;
             width: 98%;
         }
- 
+        .arrowSection > .arrow {
+            width: 50px;
+            height: 120px !important;
+        }
         
 }
 
@@ -233,10 +237,10 @@ width: 50px;
         margin-right: 100p;
     }
     .arrowSection{
-        margin: 0px 0px 0px 0px !important;
+        margin: 0px 0px 5px 0px !important;
     }
     .arrow {
         width: 50px;
-        height:100px !important;
+        height: 100px !important;
     }
 }

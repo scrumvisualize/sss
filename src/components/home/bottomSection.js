@@ -17,7 +17,7 @@ const BottomSection = () => {
         <div className="wrapper">
             <div className="row">
                 <div style={sectionStyle} className="column4">
-                    <div className='bottomText'>We know we are always good !</div>
+                    <div className='bottomText'>Trust us ! We will deliver !</div>
                 </div>
                 
                 {/* <div className="column3">
