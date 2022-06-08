@@ -2,6 +2,13 @@
 import React, { useRef, useEffect, useState } from 'react';
 import axios from 'axios'
 import { useForm } from "react-hook-form";
+import {
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle
+} from "@material-ui/core";
 
 const plydata = [
     {
@@ -22,25 +29,55 @@ const plydata = [
     {
         "id" : 4,
         "photo":"images/default-icon.png",
-        "email": "test3@test.com"
+        "email": "test4@test.com"
     },
     {
         "id" : 5,
         "photo":"images/default-icon.png",
-        "email": "test3@test.com"
-    },
-    {
-        "id" : 6,
-        "photo":"images/default-icon.png",
-        "email": "test3@test.com"
-    },
-    {
-        "id" : 7,
-        "photo":"images/default-icon.png",
-        "email": "test3@test.com"
+        "email": "test5@test.com"
     }
 ]
 
+const MyDialog = ({ open, handleClose, submitData, title, children }) => {
+  return (
+    <Dialog open={open} onClose={handleClose}>
+      <DialogTitle>{title}</DialogTitle>
+      <DialogContent>{children}</DialogContent>
+      <DialogActions>
+        <Button onClick={submitData} color="primary">
+          Ok
+        </Button>
+        <Button onClick={handleClose} color="primary">
+          Close
+        </Button>
+      </DialogActions>
+    </Dialog>
+  );
+};
+
+const useDialog = () => {
+  const [open, setOpen] = useState(false);
+  const [dataIndex,setDataIndex]=useState('')
+
+  const openDialog = (index) => {
+    setDataIndex(index);
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const submitData = () => {
+    console.log(plydata[dataIndex]);
+    setOpen(false);
+  };
+  const props = {
+    open,
+    handleClose,
+    submitData
+  };
+  return [openDialog, props];
+};
 const SearchBox = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [requestList, setRequestList] = useState([]);
@@ -53,6 +90,13 @@ const SearchBox = () => {
     const isMounted = useRef(false);
     const [helperText, setHelperText] = useState('');
     const [newsInput, setNewsInput] = useState(250);
+
+    const [openDialog, dialogProps] = useDialog();
+    const [players, setPlayers] = useState([]);
+    
+    useEffect(() => {
+    setPlayers(plydata);
+     }, []);
 
     const handleChange = (e) =>{
         setSearchTerm(e.target.value);
@@ -248,14 +292,15 @@ const SearchBox = () => {
                 <h4>Player of month</h4>
                     <div className='row'>
                         {
-                            playerOfMonth.map(({id, photo, email}) =>(
+                            playerOfMonth.map(({id, photo, email}, index) =>(
                             <div key={id} className='starPlayers'>
-                                <img src={photo}></img>
+                                <img onClick={(e) => openDialog(index)} src={photo}></img>
                                 <span className='starPlayEmail'>{email}</span>
                             </div>
                         ))}
                     </div>
                 </section>
+                <MyDialog {...dialogProps} title="Confirm player of month ?"></MyDialog>
             </section>
         </div>  
     )
