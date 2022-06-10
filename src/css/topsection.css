@@ -204,6 +204,14 @@ width: 50px;
             width: 50px;
             height: 120px !important;
         }
+        .announcebox{
+            height: 280px;
+            overflow: auto;
+            border: solid 1px #444344;
+        }
+        .updates{
+            height: 65px;
+        }
         
 }
 

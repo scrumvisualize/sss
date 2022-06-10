@@ -312,7 +312,11 @@ label {
       color:rgb(63, 211, 184);
       margin: 10px 15px 0px 260px !important;
     }
-    
+    .newsValidationText{
+      width: 100px;
+      color: rgb(27, 134, 93);
+      border: solid 1px #e4669f;
+    }
 }
 
 

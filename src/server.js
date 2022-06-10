@@ -6,6 +6,7 @@ const moment = require('moment');
 const { Sequelize, DataTypes } = require("sequelize");
 const requestSchema = require('./server/models/requests');
 const userSchema = require('./server/models/user');
+const announcementSchema = require('./server/models/announcement');
 
 
 const cors = require("cors");
@@ -35,6 +36,7 @@ const sequelize = new Sequelize(DB_NAME, DB_USERNAME, DB_PASSWORD, {
 
 const RequestModel = requestSchema(sequelize, DataTypes);
 const UserModel = userSchema(sequelize, DataTypes);
+const AnnouncementModel = announcementSchema(sequelize, DataTypes);
 
 app.use(cors({
   origin: "http://localhost:3000"
@@ -189,6 +191,30 @@ app.get('/service/activesquadlist', async (req, res) => {
   }
 });
 
+/* Below service will create news data in the announcement table */ 
+app.post('/service/announcement', async (req, res) => {
+  try {
+    const loginEmail = req.body.email;
+    const newsInput = req.body.data.newsUpdate;
+    var newsData = { email:loginEmail, news:newsInput };
+    const newsReq = await AnnouncementModel.create(newsData);
+    res.status(200).json({ success: true });
+  } catch (e) {
+    res.status(500).json({ message: e.message });
+  }
+});
+
+
+/* Below get method will get all the news data from announcement table and dispay in the Home page */ 
+
+app.get('/service/getannouncementdata', async (req, res) => {
+  try {
+    const requests = await AnnouncementModel.findAll({});
+    res.status(200).json({ requests });
+  } catch (e) {
+    res.status(500).json({ message: e.message });
+  }
+});
 
 (async () => {
   try {

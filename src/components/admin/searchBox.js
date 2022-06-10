@@ -84,7 +84,7 @@ const SearchBox = () => {
     const [searchResults, setSearchResults] = useState([]);
     const [processRequest, setProcessRequest] = useState("");
     const [loadRequests, setLoadRequests] = useState(3);
-    const { register, errors, handleSubmit } = useForm();
+    const { register, errors, handleSubmit, reset } = useForm();
     const [playerOfMonth, setPlayerOfMonth] = useState([]);
     const [visible, setVisible] = useState(false);
     const isMounted = useRef(false);
@@ -194,14 +194,26 @@ const SearchBox = () => {
         setLoadRequests((preValue) => preValue + 2);
     }
     const onSubmit = (data) => {
-        console.log("RESULT", data);
-        alert(JSON.stringify(data));
-      };
+      const email = window.localStorage.getItem('loginEmail');
+      const fetchData = async () => {
+        try {
+          const res = await axios.post('http://localhost:8000/service/announcement',{email, data} );
+          if (res.data.success) {
+            setHelperText("News added successfully !");
+          }
+        } catch (e) {
+          console.log(e);
+        }
+      }
+      fetchData();
+      reset();
+    };
 
-      const newsInputHandler = (e) =>{
+    const newsInputHandler = (e) =>{
         let input = e.target.value;
         setNewsInput(250 - input.length);
-      }
+        console.log(input);
+    }
 
     console.log(errors);
 
@@ -287,6 +299,9 @@ const SearchBox = () => {
                         </section>  
                     </form>
                 </div>
+                <label>
+                      <span className="newsValidationText">{helperText}</span>
+                </label>
                 
                 <section className='playermonthly'>
                 <h4>Player of month</h4>

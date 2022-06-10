@@ -1,5 +1,7 @@
-import React from 'react';
-import { NavLink} from 'react-router-dom';
+import React, { useRef, useEffect, useState } from 'react';
+import axios from 'axios';
+import { useForm } from "react-hook-form";
+import moment from "moment";
 import BackgroundTop from '../../image/trio.png';
 import BackDropTop from '../../image/backdrop.JPG';
 
@@ -19,6 +21,25 @@ let sectionStyleBackdrop = {
 }
 
 const TopSection = () => {
+    const { errors } = useForm();
+    const isMounted = useRef(false);
+    const [announcement, setAnnouncement] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const res = await axios.get('http://localhost:8000/service/getannouncementdata');
+            if (res.data) {
+              console.log("Display request data: "+res.data.requests);
+              setAnnouncement(res.data.requests);
+            }
+          } catch (e) {
+            console.log(e);
+          }
+        }
+        fetchData();
+}, []);
+console.log(errors);
 
     return (
         <div className="wrapper">
@@ -58,35 +79,24 @@ const TopSection = () => {
                 <div className="column">
                     {/* <div className="feeds"> */}
                     <h2>Latest News/Updates:</h2>
-                    <div className="newsDate">
-                        12 May 2022
+                  
+                    <div className="announcebox">
+                    {
+                     announcement.map(({id, news, createdAt}) =>(
+                        <div key={id} >
+                        <div className="newsDate">
+                            {moment(createdAt).format("DD-MM-YYYY hh:mm")}
+                        </div>
+                        <p>
+                        <img src="images/lines2.png"></img>
+                        <div className="annoucement updates">
+                        {news}
+                        </div>   
+                        </p>
+                        </div>
+                       ))}
                     </div>
-                    <p>
-                    <img src="images/lines2.png"></img>
-                     <div className="annoucement updates">
-                     Illo quod nemo ratione itaque dolores laudantium error vero laborum blanditiis ?
-                     </div>   
-                     </p>
-                    <div className="newsDate">
-                        08 May 2022
-                    </div>
-                     <p>
-                     <img src="images/lines2.png"></img>
-                     <div className="annoucement updates">
-                     Illo quod nemo ratione itaque dolores laudantium error vero laborum blanditiis ?
-                     </div>   
-                     </p>
-                     <div className="newsDate">
-                        02 May 2022
-                    </div>
-                     <p>
-                     <img src="images/lines2.png"></img>
-                     <div className="annoucement updates">
-                     Illo quod nemo ratione itaque dolores laudantium error vero laborum blanditiis ?
-                     </div>   
-                     </p>
-                    {/* </div> */}
-            
+                   
                 </div>
             </section>	
             {/* <section className="arrowSection">
