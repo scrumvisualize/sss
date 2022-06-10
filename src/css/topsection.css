@@ -183,8 +183,9 @@ width: 50px;
         }
         .column img{
             width:25px;
+            height: 45px !important;
             float:left;
-            margin-top: 0px;
+            margin-top: 10px !important;
             margin-right: 5px;
         }
 
@@ -240,8 +241,9 @@ width: 50px;
       }
       .column img{
         width:25px;
+        height: 42px;
         float:left;
-        margin-top: 2px;
+        margin-top: 10px;
         margin-right: 100p;
     }
     .arrowSection{
@@ -250,5 +252,14 @@ width: 50px;
     .arrow {
         width: 50px;
         height: 100px !important;
+    }
+    .announcebox{
+        height: 280px;
+        overflow: auto;
+        border: solid 1px #444344;
+    }
+    .updates{
+      width: 350px !important;
+      height: 60px;
     }
 }
