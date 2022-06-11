@@ -1,7 +1,7 @@
 @media (min-width: 1280px) {
     .col-high{
         width: 500px !important;
-        height: 600px;
+        height: 580px !important;
         border: solid 0.1px #e4669f !important;
         padding: 10px;
         margin: 10px 0px 10px 400px;

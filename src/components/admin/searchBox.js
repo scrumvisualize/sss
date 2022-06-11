@@ -85,10 +85,12 @@ const SearchBox = () => {
     const [processRequest, setProcessRequest] = useState("");
     const [loadRequests, setLoadRequests] = useState(3);
     const { register, errors, handleSubmit, reset } = useForm();
+    const [formRegister, setRegister] = useState({ _id: '', news: ''});
     const [playerOfMonth, setPlayerOfMonth] = useState([]);
     const [visible, setVisible] = useState(false);
     const isMounted = useRef(false);
     const [helperText, setHelperText] = useState('');
+    const [newsText, setNewsText] = useState('');
     const [newsInput, setNewsInput] = useState(250);
 
     const [openDialog, dialogProps] = useDialog();
@@ -199,7 +201,7 @@ const SearchBox = () => {
         try {
           const res = await axios.post('http://localhost:8000/service/announcement',{email, data} );
           if (res.data.success) {
-            setHelperText("News added successfully !");
+            setNewsText("News sent successfully.!")
           }
         } catch (e) {
           console.log(e);
@@ -288,11 +290,21 @@ const SearchBox = () => {
                         <label>Enter announcement/ news:</label>
                         <textarea
                          placeholder="Please enter your news here"
+                         name="news"
                          maxLength="250"
                          type="text"
-                            {...register("newsUpdate", { required: true })}
+                            {...register("news", { 
+                              required: true,
+                              pattern: {
+                                message: "News field cannot be blank !"
+                              }
+                            })
+                          }
                          onChange={newsInputHandler}
                         />
+                        {/* <div>
+                        {errors.news && errors.news.type === "required" && <span>News field cannot be blank !</span>}
+                        </div> */}
                         <h4>{newsInput} characters left</h4>
                         <section className="col4">
                         <input type="submit" />
@@ -300,7 +312,9 @@ const SearchBox = () => {
                     </form>
                 </div>
                 <label>
-                      <span className="newsValidationText">{helperText}</span>
+                      <span className="newsValidationText">
+                        {newsText}
+                      </span>
                 </label>
                 
                 <section className='playermonthly'>

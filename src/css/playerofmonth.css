@@ -1,0 +1,115 @@
+@media (min-width: 1280px) {
+.wrapper h2{
+    color: #fff;
+}
+.player-month{
+    display: flex;
+    grid-template-columns: 350px !important;
+    height: 300px !important;
+    grid-gap: 10px !important;
+    margin: 0px 20px 10px 10px !important;
+    padding: 20px;  
+}
+
+.box1{
+    width:300px;
+    background-color: #4d4d4d;
+    color: #fff;
+    border-radius: 5px;
+    padding: 1px !important;
+    font-size: 150%;
+    margin: 0px 0px 10px 10px !important;
+    float:left !important;
+    /* box-shadow: 0px 25px 15px 0px rgba(255, 255, 255, 0.5); */
+}
+.player-month .box1 img {
+    max-width: 100% !important;
+    width: 100% !important;
+    border: solid 0.1px #e4669f !important;
+    height:293px;
+}
+.player-month .plyarrow img {
+    max-width: 100% !important;
+    width: 100% !important;
+    height:293px;
+    border: solid 0.1px #e4669f !important;
+}
+.box2{
+    width:500px;
+    height:290px;
+    background-color: #f7f7f7;
+    color: #231d80;
+    border-radius: 5px;
+    padding: 1px !important;
+    font-size: 150%;
+    margin: 0px 0px 10px 10px !important;
+    float:right !important;
+    border: solid 0.1px #e4669f !important;
+}
+
+.player-month > .box2 > div > p{
+    font-weight: 100 !important;
+    font-size: 20px;
+    text-align: left;
+    margin: 35px 0px 0px 20px;
+    padding: 40px 0px 0px 0px;
+}
+}
+
+@media (min-width: 1920px) {
+    .wrapper h2{
+        color: #fff;
+    }
+    .player-month{
+        display: flex;
+        grid-template-columns: 350px !important;
+        height: 300px !important;
+        grid-gap: 10px !important;
+        margin: 20px 20px 10px 0px !important;
+        padding: 20px;  
+    }
+    
+    .box1{
+        width:300px;
+        background-color: #4d4d4d;
+        color: #fff;
+        border-radius: 5px;
+        padding: 1px !important;
+        font-size: 150%;
+        margin: 0px 0px 10px 10px !important;
+        float:left !important;
+        /* box-shadow: 0px 25px 15px 0px rgba(255, 255, 255, 0.5); */
+    }
+    .player-month .box1 img {
+        max-width: 100% !important;
+        width: 100% !important;
+        border: solid 0.1px #e4669f !important;
+    }
+
+    .player-month .plyarrow img {
+        max-width: 100% !important;
+        width: 100% !important;
+        height:293px;
+        border: solid 0.1px #e4669f !important;
+    }
+    .box2{
+        width:500px;
+        height:290px;
+        background-color: #f7f7f7;
+        color: #060505;
+        border-radius: 5px;
+        padding: 1px !important;
+        font-size: 150%;
+        margin: 0px 0px 10px 10px !important;
+        float:right !important;
+        border: solid 0.1px #e4669f !important;
+    }
+    
+    .player-month > .box2 > div > p{
+        font-weight: 100 !important;
+        font-size: 20px;
+        text-align: left;
+        margin: 35px 0px 0px 20px;
+        padding: 40px 0px 0px 0px;
+    }
+}

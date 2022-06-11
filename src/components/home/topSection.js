@@ -80,7 +80,7 @@ console.log(errors);
                     {/* <div className="feeds"> */}
                     <h2>Latest News/Updates:</h2>
                   
-                    <div className="announcebox">
+                    <div className="announcebox" id="style-7">
                     {
                      announcement.map(({id, news, createdAt}) =>(
                         <div key={id} >

@@ -41,28 +41,28 @@ label {
      margin: 5px 0px 10px 0px;
      justify-content: space-between;
      /* background-color: #e4669f; */
-     background-color: #e8e9eb; 
+     background-color: #4e5781;
     }
     .plyName, .checkStyle2, .checkStyle3, .checkStyle4 {
         float: right;
         width: 70px !important;
         margin: 0px 10px 0px 10px;
         font-size: 14px;
-        color: #0d1f43 !important;
+        color: #fff !important;
     }
     .plyEmail{
       float: right;
       width: 80px !important;
       margin: 0px 5px 0px 5px;
       font-size: 12px;
-      color: #0d1f43;
+      color: #fff !important;
   }
     .plyMobile{
       float: right;
       width: 50px !important;
       margin: 0px 10px 0px 5px;
       font-size: 12px;
-      color: #090909;
+      color: #fff !important;
   }
     .plyPhoto img{
       width: 50px !important;
@@ -70,6 +70,7 @@ label {
     }
     .checkStyle2 > label, .checkStyle3 > label{
       color: #0d1f43;
+      color: #fff !important;
     }
     .col1 {
         width: 710px;
@@ -150,6 +151,11 @@ label {
         border-radius: 25px;
         margin: 5px 0px 0px 2px;
       }
+      .newsValidationText{
+        width: 100px;
+        color: rgb(85, 231, 175);
+        margin: 0px 0px 10px -100px !important;
+      }
 }
 
 
@@ -181,6 +187,7 @@ label {
         margin: 5px 0px 10px 0px;
         justify-content: space-between;
         background-color: #e8e9eb; 
+        background-color: #4e5781;
        }
    
        .col1 {
@@ -273,7 +280,7 @@ label {
         width: 50px !important;
         margin: 10px 5px 0px 5px;
         font-size: 14px;
-        color: #0d1f43;
+        color: #fff !important;
     }
     .checkStyle2, .checkStyle3{
       float: right;
@@ -281,10 +288,12 @@ label {
       margin: 10px 5px 0px 5px;
       font-size: 14px;
       color: #0d1f43;
+      color: #fff !important;
     }
 
     .checkStyle2 > label, .checkStyle3 > label{
       color: #0d1f43;
+      color: #fff !important;
     }
     
     .plyEmail{
@@ -293,6 +302,7 @@ label {
       margin: 10px 15px 0px 0px;
       font-size: 12px;
       color: #0d1f43;
+      color: #fff !important;
   }
     .plyMobile{
       float: right;
@@ -300,6 +310,7 @@ label {
       margin: 10px 10px 0px 5px;
       font-size: 12px;
       color: #0d1f43;
+      color: #fff !important;
   }
     .plyPhoto img{
       width: 30px !important;
@@ -314,8 +325,8 @@ label {
     }
     .newsValidationText{
       width: 100px;
-      color: rgb(27, 134, 93);
-      border: solid 1px #e4669f;
+      color: rgb(85, 231, 175);
+      margin: 0px 15px 0px -110px !important;
     }
 }
 
