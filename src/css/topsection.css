@@ -69,15 +69,14 @@
 @media (min-width: 1280px) {
     .column {
         flex: 1;
-        margin: 2px;
-        padding: 15px;
+        margin: 0px 10px -30px 0px;
+        padding: 0px 0px 0px 0px;
         background-color: #2a3156;
         height: 350px;
-        width:100px !important;
         /* margin: 10px 15px 0px 0px; */
         color: #fff;
     }
-.col-sm-15 {
+    .col-sm-15 {
         width: 20%;
         float: left;
     }
