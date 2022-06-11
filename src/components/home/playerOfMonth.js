@@ -11,7 +11,7 @@ const PlayerOfMonth = () => {
                         </img>
                     </div>
                     <div className='box1 playermonth'>
-                        <img src="/images/ssslogo2.png">  
+                        <img src="/images/badge.png">  
                         </img>
                     </div>
                     <div className='box1 playermonth'>
