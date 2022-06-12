@@ -318,7 +318,7 @@ const SearchBox = () => {
                 </label>
                 
                 <section className='playermonthly'>
-                <h4>Player of month</h4>
+                <h4>Player of the month</h4>
                     <div className='row'>
                         {
                             playerOfMonth.map(({id, photo, email}, index) =>(
