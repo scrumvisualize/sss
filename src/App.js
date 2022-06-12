@@ -13,6 +13,7 @@ import "./css/requesttojoin.css";
 import "./css/footer.css";
 import "./css/team.css";
 import "./css/playerofmonth.css";
+import "./css/contactus.css";
 import Navigation from './components/navigation';
 import Home from "./components/home";
 import AboutUs from "./components/aboutUs";
@@ -20,6 +21,7 @@ import Team from "./components/team";
 import Admin from "./components/admin";
 import Login from "./components/login";
 import RequestToJoin from "./components/requestToJoin";
+import ContactUS from "./components/contactUs";
 import { ProtectedRoute } from "./components/protectedRoute";
 
 function App() {
@@ -36,6 +38,8 @@ function App() {
           <Route path="/login" element={<Login />}>
           </Route>
           <Route path="/requestToJoin" element={<RequestToJoin />}>
+          </Route>
+          <Route path="/contactUs" element={<ContactUS />}>
           </Route>
           <Route path="/admin" element={
               <ProtectedRoute >

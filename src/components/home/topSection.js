@@ -31,6 +31,9 @@ const TopSection = () => {
             const res = await axios.get('http://localhost:8000/service/getannouncementdata');
             if (res.data) {
               console.log("Display request data: "+res.data.requests);
+              res.data.requests.sort(function(a,b){
+                return new Date(b.createdAt) - new Date(a.createdAt);
+              });
               setAnnouncement(res.data.requests);
             }
           } catch (e) {
@@ -96,7 +99,6 @@ console.log(errors);
                         </div>
                        ))}
                     </div>
-                   
                 </div>
             </section>	
             {/* <section className="arrowSection">

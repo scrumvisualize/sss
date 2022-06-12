@@ -293,7 +293,7 @@ const SearchBox = () => {
                          name="news"
                          maxLength="250"
                          type="text"
-                            {...register("news", { 
+                            {...register("newsUpdate", { 
                               required: true,
                               pattern: {
                                 message: "News field cannot be blank !"

@@ -126,7 +126,7 @@ const BottomAllLevels = () => {
             <section className="feedback">
                 <h5>
                     <span>
-                        <a href="/feedback">Feedback</a>
+                        <a href="/contactUs">Contact Us</a>
                     </span>
                 </h5>
                 
