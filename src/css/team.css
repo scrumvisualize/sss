@@ -62,11 +62,11 @@
       }
       .squads {
         display: grid;
-        grid-template-columns: 350px 350px 350px 350px !important;
+        grid-template-columns: 370px 370px 370px 370px !important;
         height: 350px !important;
         grid-gap: 10px !important;
         color: #444;
-        margin: 20px 20px 10px 180px !important;
+        margin: 0px 20px 10px 180px !important;
         padding: 20px;
       }
       
