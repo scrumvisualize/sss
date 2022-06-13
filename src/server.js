@@ -7,6 +7,7 @@ const { Sequelize, DataTypes } = require("sequelize");
 const requestSchema = require('./server/models/requests');
 const userSchema = require('./server/models/user');
 const announcementSchema = require('./server/models/announcement');
+const playerofMonthSchema = require('./server/models/playerofmonth');
 
 
 const cors = require("cors");
@@ -37,6 +38,7 @@ const sequelize = new Sequelize(DB_NAME, DB_USERNAME, DB_PASSWORD, {
 const RequestModel = requestSchema(sequelize, DataTypes);
 const UserModel = userSchema(sequelize, DataTypes);
 const AnnouncementModel = announcementSchema(sequelize, DataTypes);
+const PlayerOfMonthModel = playerofMonthSchema(sequelize, DataTypes);
 
 app.use(cors({
   origin: "http://localhost:3000"
@@ -211,6 +213,22 @@ app.get('/service/getannouncementdata', async (req, res) => {
   try {
     const requests = await AnnouncementModel.findAll({});
     res.status(200).json({ requests });
+  } catch (e) {
+    res.status(500).json({ message: e.message });
+  }
+});
+
+
+/* Below post service is to set the player of the month by an admin user */ 
+
+app.post('/service/add/playerofmonth', async (req, res) => {
+  try {
+    const plyName = req.body.data.name;
+    const plyPhoto = req.body.data.photo;
+    const plyEmail = req.body.data.email;
+    var playerData = { name: plyName, email:plyEmail, photo:plyPhoto };
+    const plydata = await PlayerOfMonthModel.create(playerData);
+    res.status(200).json({ success: true });
   } catch (e) {
     res.status(500).json({ message: e.message });
   }

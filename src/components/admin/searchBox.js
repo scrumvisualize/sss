@@ -13,26 +13,31 @@ import {
 const plydata = [
     {
         "id" : 1,
+        "name": "Vinod",
         "photo":"images/default-icon.png",
         "email": "test1@test.com"
     },
     {
         "id" : 2,
+        "name": "Dan Man",
         "photo":"images/default-icon.png",
         "email": "test2@test.com"
     },
     {
         "id" : 3,
+        "name": "Rozario",
         "photo":"images/default-icon.png",
         "email": "test3@test.com"
     },
     {
         "id" : 4,
+        "name": "Roy",
         "photo":"images/default-icon.png",
         "email": "test4@test.com"
     },
     {
         "id" : 5,
+        "name": "Bob Mathew",
         "photo":"images/default-icon.png",
         "email": "test5@test.com"
     }
@@ -69,8 +74,19 @@ const useDialog = () => {
 
   const submitData = () => {
     console.log(plydata[dataIndex]);
+    const data = plydata[dataIndex];
+    const fetchData = async () => {
+      try {
+        const res = await axios.post('http://localhost:8000/service/add/playerofmonth', {data});
+     
+      } catch (e) {
+        console.log(e);
+      }
+    }
+    fetchData();
     setOpen(false);
   };
+
   const props = {
     open,
     handleClose,
