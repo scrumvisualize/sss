@@ -284,7 +284,7 @@ const SearchBox = () => {
                    </label>
             </section>
             <section className="col2">
-            <h3>Announcement/ News</h3>
+            <h3>Announcement</h3>
                 <div className='newsSection'>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <label>Enter announcement/ news:</label>
@@ -318,7 +318,7 @@ const SearchBox = () => {
                 </label>
                 
                 <section className='playermonthly'>
-                <h4>Player of the month</h4>
+                <h4>Player of the Month</h4>
                     <div className='row'>
                         {
                             playerOfMonth.map(({id, photo, email}, index) =>(
