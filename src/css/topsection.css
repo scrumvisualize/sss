@@ -153,12 +153,12 @@ width: 50px;
 @media (min-width: 1920px) {
     .column {
         flex: 1;
-        margin: 0px 10px -30px 0px;
+        margin: 0px 1px -30px 0px;
         padding: 0px 0px 0px 20px;
         background-color: #2a3156;
         height: 350px;
-        width:100px !important;
         color: #fff;
+        border: solid 0.1px #8d2b47
     }
     .col-sm-15 {
             width: 20%;
@@ -226,7 +226,7 @@ width: 50px;
         .announcebox{
             height: 280px;
             overflow: auto;
-            border: solid 1px #444344;
+            margin-top: -15px !important;
         }
         .updates{
             height: 65px;
@@ -274,7 +274,6 @@ width: 50px;
     .announcebox{
         height: 280px;
         overflow: auto;
-        border: solid 1px #444344;
     }
     .announcebox::-webkit-scrollbar {
         width: 5px;

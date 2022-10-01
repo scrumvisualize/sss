@@ -23,19 +23,19 @@
     /* box-shadow: 0px 25px 15px 0px rgba(255, 255, 255, 0.5); */
 }
 .player-month .box1 img {
-    max-width: 100% !important;
-    width: 100% !important;
+    max-width: 95% !important;
+    width: 95% !important;
     border: solid 0.1px #e4669f !important;
     height:293px;
 }
 .player-month .plyarrow img {
-    max-width: 100% !important;
-    width: 100% !important;
+    max-width: 95% !important;
+    width: 95% !important;
     height:293px;
     border: solid 0.1px #e4669f !important;
 }
 .box2{
-    width:500px;
+    width:250px;
     height:290px;
     background-color: #f7f7f7;
     color: #231d80;
@@ -93,7 +93,7 @@
         border: solid 0.1px #e4669f !important;
     }
     .box2{
-        width:500px;
+        width:400px;
         height:290px;
         background-color: #f7f7f7;
         color: #060505;

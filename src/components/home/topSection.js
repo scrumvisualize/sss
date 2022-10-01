@@ -60,18 +60,19 @@ console.log(errors);
                     </div>
                     <p>
                     <div id='overlay'>
-                      We started our club in 2018 at Calamvale location. We have received club registration in 2020.
+                      We started our club in 2018 at Calamvale, Brisbane. We received our club registration in 2020 and actively running the club with regular games
+                      at Salisbury and Sunnybank.
                     </div>
                     </p>
                     <p>
                     <div id='overlay'>
-                      In our club, we have players with age ranges between 19 to 60 years.
+                      In our club, we have players with age ranges between 19 to 45 years.
                       We could be self rated at division C club progressing to division B.
                     </div>
                     </p>
                     <p>
                     <div id='overlay'>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione architecto necessitatibus cum praesentium dolor totam voluptatibus recusandae?
+                      Today we are having 40 active players in our soccer group and 60 plus members supporting our club.
                     </div>
                     </p>
                 </div>

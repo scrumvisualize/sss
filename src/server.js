@@ -218,6 +218,16 @@ app.get('/service/getannouncementdata', async (req, res) => {
   }
 });
 
+/* Below get service is to get all players with status Yes under Player of month section */ 
+app.get('/service/all/playersofmonth', async (req, res) => {
+  try {
+   var sqlQuery = await sequelize.query(`SELECT id, name, email, photo FROM sssclub.request where status="Yes";`);
+    res.status(200).json({ sqlQuery });
+  } catch (e) {
+    res.status(500).json({ message: e.message });
+  }
+});
+
 
 /* Below post service is to set the player of the month by an admin user */ 
 
@@ -233,6 +243,20 @@ app.post('/service/add/playerofmonth', async (req, res) => {
     res.status(500).json({ message: e.message });
   }
 });
+
+
+/* Below service is to get the player of the month and display in Home page */ 
+
+app.get('/service/get/playerofmonth', async (req, res) => {
+  try {
+   var sqlQuery = await sequelize.query('SELECT id, name, email, photo FROM sssclub.playerofmonth WHERE createdAt IN (SELECT max(createdAt) FROM sssclub.playerofmonth);');
+    res.status(200).json({ sqlQuery });
+  } catch (e) {
+    res.status(500).json({ message: e.message });
+  }
+});
+
+
 
 (async () => {
   try {
