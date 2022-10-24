@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import moment from "moment";
 import BackgroundTop from '../../image/trio.png';
 import BackDropTop from '../../image/backdrop.JPG';
+const appURL = process.env.REACT_APP_URL;
 
 
 let sectionStyle = {
@@ -28,7 +29,7 @@ const TopSection = () => {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const res = await axios.get('http://localhost:8000/service/getannouncementdata');
+            const res = await axios.get(`${appURL}/service/getannouncementdata`);
             if (res.data) {
               console.log("Display request data: "+res.data.requests);
               res.data.requests.sort(function(a,b){

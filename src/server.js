@@ -71,8 +71,9 @@ app.put('/service/joinrequest',  upload.single('photo'), async (req, res, next) 
     const pName = req.body.name;
     const pEmail = req.body.email; 
     const pMobile = req.body.mobile;
+    const pPosition = req.body.position;
     console.log(req.file);
-    const validCode = "Soccer-575";
+    const validCode = "S0ccer-575#";
     if( code == validCode ) {
     const playerEmail = await RequestModel.count({ where: { email: pEmail } });
       if (playerEmail == 0) {
@@ -87,7 +88,7 @@ app.put('/service/joinrequest',  upload.single('photo'), async (req, res, next) 
       } else {
           var imageName = "noimage.png";
       }    
-        var requestData = {name:pName, email:pEmail, mobile:pMobile, photo: revisedPath, code: code };
+        var requestData = {name:pName, email:pEmail, mobile:pMobile, position:pPosition, photo: revisedPath, code: code };
         const addRequest = await RequestModel.create(requestData);
         console.log("Server side PUT method log:" + addRequest);
         res.status(200).json({ success: true });

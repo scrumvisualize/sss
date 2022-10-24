@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import axios from 'axios'
+import axios from 'axios';
+const appURL = process.env.REACT_APP_URL;
 
 const PlayerOfMonth = () => {
 
@@ -9,7 +10,7 @@ const isMounted = useRef(false);
 useEffect(() => {
     const fetchData = async () => {
         try {
-            const res = await axios.get('http://localhost:8000/service/get/playerofmonth');
+            const res = await axios.get(`${appURL}/service/get/playerofmonth`);
             setPlayerMonth(res.data.sqlQuery[0]);
           } catch (e) {
            console.log(e);

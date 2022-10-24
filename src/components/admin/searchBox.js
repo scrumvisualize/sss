@@ -10,6 +10,8 @@ import {
   DialogTitle
 } from "@material-ui/core";
 
+const appURL = process.env.REACT_APP_URL;
+
 const plydata = [
   {
     "id": 1,
@@ -77,7 +79,7 @@ const useDialog = () => {
     const data = plydata[dataIndex];
     const fetchData = async () => {
       try {
-        const res = await axios.post('http://localhost:8000/service/add/playerofmonth', { data });
+        const res = await axios.post(`${appURL}/service/add/playerofmonth`, { data });
 
       } catch (e) {
         console.log(e);
@@ -129,7 +131,7 @@ const SearchBox = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('http://localhost:8000/service/requestlist');
+        const res = await axios.get(`${appURL}/service/requestlist`);
         if (isMounted.current) {
           console.log("Display request data: " + res.data.requests);
           setSearchResults(res.data.requests);
@@ -154,7 +156,7 @@ const SearchBox = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('http://localhost:8000/service/all/playersofmonth');
+        const res = await axios.get(`${appURL}/service/all/playersofmonth`);
         setPlayerOfMonth(res.data.sqlQuery[0]);
       } catch (e) {
         console.log(e);
@@ -181,7 +183,7 @@ const SearchBox = () => {
   const processRequestData = (id, email) => {
     const fetchData = async () => {
       try {
-        const res = await axios.post('http://localhost:8000/service/acceptplayerrequest', { email });
+        const res = await axios.post(`${appURL}/service/acceptplayerrequest`, { email });
         if (res.data.success) {
           setHelperText("Player accepted successfully !");
         }
@@ -200,7 +202,7 @@ const SearchBox = () => {
   const declinePlayerRequest = (e, email) => {
     const fetchData = async () => {
       try {
-        const res = await axios.put('http://localhost:8000/service/declinerequest', { email });
+        const res = await axios.put(`${appURL}/service/declinerequest`, { email });
         if (res.data.success) {
           setHelperText("Request has been declined !");
         }
@@ -227,7 +229,7 @@ const SearchBox = () => {
     const email = window.localStorage.getItem('loginEmail');
     const fetchData = async () => {
       try {
-        const res = await axios.post('http://localhost:8000/service/announcement', { email, data });
+        const res = await axios.post(`${appURL}/service/announcement`, { email, data });
         if (res.data.success) {
           setNewsText("News sent successfully.!")
         }

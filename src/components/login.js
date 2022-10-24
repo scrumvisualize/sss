@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+const appURL = process.env.REACT_APP_URL;
 
 const Login = () =>{
     const { register, handleSubmit, formState: { errors }, reset} = useForm();
@@ -10,12 +11,11 @@ const Login = () =>{
     const navigate = useNavigate();
 
     const onSubmit = (data) => {
-       // alert(JSON.stringify(data));
     const fetchData = async () => {
       try{
        const email = data.email;
        const password = data.password;
-       const res = await axios.post('http://localhost:8000/service/login', { email, password });
+       const res = await axios.post(`${appURL}/service/login`, { email, password });
         console.log("Login success message::" + res.data.success);
         if (res.data.success) {
           localStorage.setItem('loginEmail', email);  
@@ -33,21 +33,6 @@ const Login = () =>{
         }
      }
      fetchData();
-     //reset();
-        // try {
-        //     const userEmail = "max@test.com";
-        //     const userPassword = "test1234";
-        //     if(data.email === userEmail && data.password === userPassword ){
-        //         localStorage.setItem('loginEmail', userEmail);
-        //         setLoginData(userEmail);
-        //         navigate('/admin');
-        //         window.location.reload(true) 
-        //     } else {
-        //         setHelperText("Invalid login details");
-        //     }
-        // } catch (e){
-        //     console.log(e);
-        // }
       };
     console.log(errors);
 

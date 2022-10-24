@@ -5,6 +5,7 @@ import MiddleSection from "./home/middleSection";
 import BottomSection from "./home/bottomSection";
 import BottomAllLevels from "./home/bottomAllLevels";
 import PlayerOfMonth from "./home/playerOfMonth";
+import VideoFullLengthSection from "./home/videoFullLengthSection";
 import Footer from "./footer";
 
 
@@ -23,6 +24,9 @@ const Home = () => {
                 <MiddleSection/>
             <div className="row">
                 <BottomSection/> 
+            </div> 
+            <div className="row">
+                <VideoFullLengthSection/> 
             </div> 
             <div className="row">
                 <PlayerOfMonth/> 

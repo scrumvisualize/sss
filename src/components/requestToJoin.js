@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+const appURL = process.env.REACT_APP_URL;
+
 const RequestToJoin = () =>{
     const { register, handleSubmit, formState: { errors }, reset} = useForm();
     const [loginData, setLoginData] = useState("");
@@ -11,26 +13,35 @@ const RequestToJoin = () =>{
     const [imgData, setImgData] = useState(null);
     const navigate = useNavigate();
     const [isSent, setIsSent] = useState(false);
-    const [formRegister, setRegister] = useState({ _id: '', name: '', email: '', mobile: '', photo: '', code: ''});
+    const [formRegister, setRegister] = useState({ _id: '', name: '', email: '', mobile: '', postion:'', photo: '', code: ''});
     const successMessage = <p>Request send successfully!</p>
     const form = <form>...</form>
+    
+    const options = [
+    {value: '', text: '--Select Position --'},
+    {value: 'Goal Keeper', text: 'Goal Keeper'},
+    {value: 'Striker', text: 'Striker'},
+    {value: 'Attacking Midfielder', text: 'Attacking Midfielder'},
+    {value: 'Right Midfielder', text: 'Right Midfielder'},
+    {value: 'Left Midfielder', text: 'Left Midfielder'},
+    {value: 'Defending Midfielder', text: 'Defending Midfielder'},
+    {value: 'Center Back', text: 'Center Back'},
+    {value: 'Right Full Back', text: 'Fight Full Back'},
+    {value: 'Left Full Back', text: 'Left Full Back'},
+    ];
+
+    const [positionType, setPositionType] = useState([options[0].value]);
+    const [defaultValue, setDefaultValue] = useState("Select Position");
 
 // If no profile image is being uploaded, to avoid the broken display of image, display a default image.
         const addDefaultSrc = e => {
             e.target.src = 'images/default-icon.png';
         }
 
-        // const onChangePicture = e => {
-        //     if (e.target.files[0]) {
-        //       console.log("picture: ", e.target.files);
-        //       setPicture(e.target.files[0]);
-        //       const reader = new FileReader();
-        //       reader.addEventListener("load", () => {
-        //         setImgData(reader.result);
-        //       });
-        //       reader.readAsDataURL(e.target.files[0]);
-        //     }
-        // };
+        const handlePositionTypeChange = (e) => {
+          console.log(e.target.value);
+          setPositionType(e.target.value);
+        };
         
         const onChangePicture = e => {
           console.log('picture: ', picture);
@@ -64,7 +75,7 @@ const RequestToJoin = () =>{
             }
               const fetchData = async () => {
                 try {
-                  const res = await axios.put('http://localhost:8000/service/joinrequest', formData, config);
+                  const res = await axios.put(`${appURL}/service/joinrequest`, formData, config);
                   console.log("Front End success message:" + res.data.success);
                   if (res.data.success) {
                     setIsSent(true);
@@ -86,7 +97,7 @@ const RequestToJoin = () =>{
     return (
         <div className="wrapper">
             <section className="col-high">
-                <h3>Send a request</h3>
+                <h3>Please submit request</h3>
                 <div className='requestSection'>
                     <form onSubmit={handleSubmit(onSubmit)}  className="myForm" encType="multipart/form-data">
                         <label>Name</label>
@@ -164,6 +175,34 @@ const RequestToJoin = () =>{
                              {errors.mobile && errors.mobile.type === "maxLength" && <span>Maximum of 10 digits</span>}
                          </span>
                         </section>
+                        <label>Desired Position</label>
+                        <select
+                         value={positionType}
+                         name="position"
+                         className="browser-default custom-select"
+                         {...register("position", { 
+                          onChange: (e) => {
+                          let val = e.nativeEvent.path[0].value;
+                          setRegister(previous => ({
+                              ...previous, 
+                              position: val
+                              }));
+                            }
+                         })}
+                         onChange={handlePositionTypeChange}
+                         >
+                          {/* <option value="Select Position" disabled>
+                              Select Position...
+                          </option> */}
+                          {
+                            options.map((option, key) =>( 
+                            <option key={option.key} value={option.value}>
+                              {option.text}
+                            </option>
+                            ))} 
+                          </select >
+                          <section>
+                        </section>
                         <label>Photo</label>
                         <div className="request_profile_image">
                             <input 
@@ -206,10 +245,6 @@ const RequestToJoin = () =>{
                                 }));
                             },
                               required: true
-                              // pattern: {
-                              //       value:/^[a-zA-Z0-9]$/i, // /^[a-zA-Z0-9]$/i, ///^([a-zA-Z0-9]+)$/i
-                              //       message: "Only alphanumeric characters allowed !"
-                              //     }
                             })}
                         />
                         <section>

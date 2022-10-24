@@ -1,0 +1,37 @@
+
+    .wrapper {
+        padding: 5px !important;
+        max-width: 1400px;
+        width: 100%;
+        margin: 10px auto;
+        margin-top: 20px !important;
+      }
+    .video-wrapper {
+    flex: 50%;
+    height: 385px;
+    /* border: solid 0.1px #8d2b47 !important; */
+    margin: 20px 0px 0px 0px !important;
+  }
+    .video-wrapper video {
+      vertical-align: right;
+      width: 100%;
+      height:500px;
+      z-index:-10;
+    }
+.videoTag2{
+  border: solid 0.1px #8d2b47 !important;
+  flex: 50%;
+  width:700px;
+}
+
+.secondVideoText {
+  width:700px;
+  margin-left: 8px;
+  background-color: aliceblue;
+  border: solid 0.1px #8d2b47 !important;
+}
+
+.bottomText2{
+  margin: 10px 0px 0px 10px;
+
+}
