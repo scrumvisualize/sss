@@ -50,6 +50,9 @@
     height: 30px;
     margin: 0px 0px 0px 900px;
   }
+  span h2{
+    color: #ffffff;
+  }
 }
 .hyphen{
   width:30px;

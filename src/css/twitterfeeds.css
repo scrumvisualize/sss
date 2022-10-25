@@ -1,0 +1,12 @@
+
+.twitterRecords {
+    width: 25%;
+    height: 350px;
+    margin: 0px 10px 5px 10px;
+
+}
+
+.twitterfeeds{
+    display: flex;
+    position: relative;
+}

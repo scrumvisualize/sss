@@ -13,8 +13,12 @@ const VideoFullLengthSection = () => {
                 </div>
                 <div className="secondVideoText">
                     <div className='bottomText2'> 
-                        <span>
-                           Team playing at Sunnybank turf field.
+                        <h3>Training Video</h3>
+                        <span className='trainingText'>
+                           Sunnybank turf field is one of the best artificial turf field. 
+                           The quality of the field is very good. 
+
+                           Please have a look...
                         </span>
                     </div>
                 </div>

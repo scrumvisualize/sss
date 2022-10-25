@@ -17,7 +17,7 @@ const BottomSection = () => {
         <div className="wrapper">
             <div className="row">
                 <div style={sectionStyle} className="column4">
-                    <div className='bottomText'>Trust us ! We will deliver our best !</div>
+                    <div className='bottomText'>Always believe yourself ! Give your best..!</div>
                 </div>
                 <div className="video-wrapper">
                     <video id="videoBG" className='videoTag' autoPlay loop muted>

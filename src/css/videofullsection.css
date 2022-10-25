@@ -33,5 +33,9 @@
 
 .bottomText2{
   margin: 10px 0px 0px 10px;
+}
 
+.trainingText{
+  margin: 10px;
+  font-weight: 500;
 }

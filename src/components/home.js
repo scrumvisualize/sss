@@ -7,6 +7,7 @@ import BottomAllLevels from "./home/bottomAllLevels";
 import PlayerOfMonth from "./home/playerOfMonth";
 import VideoFullLengthSection from "./home/videoFullLengthSection";
 import Footer from "./footer";
+import TwitterFeeds from "./home/twitterFeeds";
 
 
 const Home = () => {
@@ -31,6 +32,9 @@ const Home = () => {
             <div className="row">
                 <PlayerOfMonth/> 
             </div>
+            <div className="row">
+                <TwitterFeeds/> 
+            </div> 
             <div className="row">
                 <BottomAllLevels/> 
             </div> 

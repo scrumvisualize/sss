@@ -15,6 +15,7 @@ import "./css/team.css";
 import "./css/playerofmonth.css";
 import "./css/contactus.css";
 import "./css/videofullsection.css"
+import "./css/twitterfeeds.css"
 import Navigation from './components/navigation';
 import Home from "./components/home";
 import AboutUs from "./components/aboutUs";

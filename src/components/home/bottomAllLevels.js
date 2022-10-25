@@ -16,6 +16,9 @@ const BottomAllLevels = () => {
     return (
         
         <div className="bottomAll">
+            <span>
+            <h2>Playing Location</h2>
+            </span>
             <div className="row">
                 <div className="column5">
                     <h3><div className='hyphen'></div>Skills</h3>

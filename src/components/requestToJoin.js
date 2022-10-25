@@ -26,7 +26,7 @@ const RequestToJoin = () =>{
     {value: 'Left Midfielder', text: 'Left Midfielder'},
     {value: 'Defending Midfielder', text: 'Defending Midfielder'},
     {value: 'Center Back', text: 'Center Back'},
-    {value: 'Right Full Back', text: 'Fight Full Back'},
+    {value: 'Right Full Back', text: 'Right Full Back'},
     {value: 'Left Full Back', text: 'Left Full Back'},
     ];
 
